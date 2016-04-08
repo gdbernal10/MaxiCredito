@@ -1,0 +1,1085 @@
+﻿<!doctype html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>MAXICREDITO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Bootstrap 3.3.2 -->
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/js/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="assets/js/slider/css/slider.css" rel="stylesheet" />
+    <link href="assets/js/slider/css/bootstrap-slider.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="assets/js/modernizr.custom.32033.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--popup-->
+    <link href="assets/css/popup/custombox.css" rel="stylesheet" />
+    <!--popup-->
+    <link href="assets/css/bootstrap-select.css" rel="stylesheet" />
+    <style>
+        .modal-demo {
+            background-color: transparent;
+            width: 800px;
+            height: 800px;
+            border: transparent none 0;
+            /*border-radius: 10px;*/
+            /*box-shadow: 0 8px 6px -6px black;*/
+            text-align: center;
+            display: none;
+        }
+
+        .title {
+            padding: 10px 20px 15px 20px;
+            line-height: 18px;
+            font-size: 18px;
+            border-bottom: #CCC solid 1px;
+        }
+
+        .text {
+            padding: 0 20px 20px 20px;
+        }
+
+
+
+        #slideIzq, #fadeIzq {
+            position: absolute;
+            background: white;
+            z-index: 99999 !important;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            cursor:pointer;
+        }
+
+        #slideIzq, #fadeIzq {
+            left: -5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pre-loader">
+        <div class="load-con">
+            <img src="assets/img/freeze/logo.png" class="animated fadeInDown" alt="">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="fa fa-bars fa-lg"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/freeze/logo.png" alt="" class="logo">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="getApp" href="#support">Buscar Mi Crédito</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-->
+        </nav>
+
+        <!--RevSlider-->
+        <div class="tp-banner-container">
+            <div class="tp-banner">
+                <ul>
+                    <!-- SLIDE 1 -->
+                    <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
+                        <!-- MAIN IMAGE -->
+                        <img src="assets/img/transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption customin customout hidden-xs"
+                             data-x="center"
+                             data-y="bottom"
+                             data-hoffset="30"
+                             data-voffset="0"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="assets/img/freeze/Slides/Credito.png" alt="" style="width:95%; height:95%;">
+                        </div>
+                        <div class="tp-caption customin customout visible-xs"
+                             data-x="center"
+                             data-y="center"
+                             data-hoffset="30"
+                             data-voffset="0"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="assets/img/freeze/Slides/Credito.png" alt="" style="width:99%; height:99%;">
+                        </div>
+                    </li>
+                    <!-- SLIDE 2 -->
+                    <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
+                        <!-- MAIN IMAGE -->
+                        <img src="assets/img/transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption customin customout hidden-xs"
+                             data-x="center"
+                             data-y="bottom"
+                             data-hoffset="30"
+                             data-voffset="0"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="assets/img/freeze/Slides/Credito 2.png" alt="" style="width:90%; height:90%;">
+                        </div>
+                        <div class="tp-caption customin customout visible-xs"
+                             data-x="center"
+                             data-y="center"
+                             data-hoffset="30"
+                             data-voffset="0"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="assets/img/freeze/Slides/Credito 2.png" alt="">
+                        </div>
+                    </li>
+                    <!-- SLIDE 3 -->
+                    <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
+                        <!-- MAIN IMAGE -->
+                        <img src="assets/img/transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption customin customout hidden-xs"
+                             data-x="center"
+                             data-y="bottom"
+                             data-hoffset="30"
+                             data-voffset="0"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="assets/img/freeze/Slides/Credito 3.png" alt="" style="width:95%; height:95%;">
+                        </div>
+                        <div class="tp-caption customin customout visible-xs"
+                             data-x="center"
+                             data-y="center"
+                             data-hoffset="30"
+                             data-voffset="0"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="assets/img/freeze/Slides/Credito 3.png" alt="">
+                        </div>
+                    </li>
+                    <!-- SLIDE 4 -->
+                    <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
+                        <!-- MAIN IMAGE -->
+                        <img src="assets/img/transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption customin customout hidden-xs"
+                             data-x="center"
+                             data-y="bottom"
+                             data-hoffset="30"
+                             data-voffset="0"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="assets/img/freeze/Slides/Credito 4.png" alt="" style="width:80%; height:80%;">
+                        </div>
+                        <div class="tp-caption customin customout visible-xs"
+                             data-x="center"
+                             data-y="center"
+                             data-hoffset="30"
+                             data-voffset="0"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="assets/img/freeze/Slides/Credito 4.png" alt="">
+                        </div>
+                    </li>
+                    <!-- SLIDE 5 -->
+                    <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
+                        <!-- MAIN IMAGE -->
+                        <img src="assets/img/transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption customin customout hidden-xs"
+                             data-x="center"
+                             data-y="bottom"
+                             data-hoffset="30"
+                             data-voffset="-20"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="assets/img/freeze/Slides/Credito 5.png" alt="" style="width:80%; height:80%;">
+                        </div>
+                        <div class="tp-caption customin customout visible-xs"
+                             data-x="center"
+                             data-y="center"
+                             data-hoffset="30"
+                             data-voffset="0"
+                             data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+                             data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                             data-speed="1000"
+                             data-start="700"
+                             data-easing="Power4.easeOut">
+                            <img src="assets/img/freeze/Slides/Credito 5.png" alt="">
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="wrapper">
+
+        <br />
+        <section id="support" class="doublediagonal scrollpoint sp-effect5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default oferta">
+                            <div class="panel-body">
+                                <div class="data-header">
+                                    <h4 style="color:white; font-weight:bold;">MaxiCredito te ayuda a encontrar el crédito ideal</h4>
+                                    <h3 style="color:white;font-weight:bold;">Crédito Libre Inversión</h3>
+                                </div>
+                                <h3>Plazo del Crédito en Meses: &nbsp;&nbsp;<b><span id="lblTerm">12</span></b></h3>
+
+                                <div class="form-group">
+                                    <input id="ex6" type="text" style="width:100%;" data-slider-min="1" data-slider-max="120" data-slider-step="1" data-slider-value="12"
+                                           data-slider-ticks="[1, 12, 24, 36, 48, 60, 72, 84]"
+                                           data-slider-ticks-labels='["1","12", "24", "36", "48", "60", "72", "84"]' />
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                        <div class="panel panel-default oferta">
+                                            <div class="table-item scrollpoint sp-effect5">
+                                                <div class="form-group">
+                                                    <h3><b>Monto en pesos</b></h3>
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">$</div>
+                                                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="1.000.000" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="panel panel-default oferta">
+                                            <div class="table-item">
+                                                <div class="scrollpoint sp-effect5">
+                                                    <h3><b>Es Empleado</b></h3>
+                                                    <label>
+                                                        <input type="radio" name="iCheck" checked="checked">
+                                                        <b>SI&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="iCheck">
+                                                        <b>NO</b>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4" style="text-align:center; vertical-align:middle;">
+                                        <div class="panel panel-default oferta">
+                                            <div class="table-item scrollpoint sp-effect5">
+                                                <div class="form-group">
+                                                    <h3><b>Sueldo en pesos</b></h3>
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">$</div>
+                                                        <input type="text" class="form-control" id="txtSalary" placeholder="0" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#containerResult" class="btn btn-mxc col-xs-12"><b>BUSCAR MI CRÉDITO IDEAL</b></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="getApp">
+
+
+            <div class="container-fluid" id="containerResult">
+                <div class="section-heading inverse scrollpoint sp-effect3">
+                    <h1>Crédito Libre Inversión</h1>
+                    <p style="font-weight:bold;">Estas son las mejores ofertas para tu Crédito</p>
+                    <div class="divider"></div>
+                    <div class="panel panel-default">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="result-header">
+                                    <div class="scrollpoint sp-effect5">
+                                        <img src="Img/mxc.png" />
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <a href="#screens" class="btn btn-mxc col-xs-12" id="get-checked-data"><b>COMPARAR OFERTAS</b></a>
+                                </div>
+                                <div class="container">
+                                    <div class="col-md-12" id="tableResultMxc">
+                                        <p style="color: #0aabe1; font-weight:bold;">Seleccione las ofertas que quieras Comparar</p>
+
+                                        <ul id="check-list-box" class="list-group checked-list-box">
+                                            <li class="list-group-item">
+                                                <div class="panel panel-default">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="table-item">
+                                                                <div class="scrollpoint sp-effect5">
+                                                                    <img src="Img/bbva.png" alt="" class="table-imgOferta" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
+                                                                <label>
+                                                                    <b>Tasa Mensual</b>
+                                                                </label>
+                                                            </div>
+                                                            <div class="table-Valor">
+                                                                <label>
+                                                                    <b>1.41 %</b>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 scrollpoint sp-effect5" style="text-align:center; vertical-align:middle;">
+                                                            <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
+                                                                <label>
+                                                                    <b>Cuota Mensual</b>
+                                                                </label>
+                                                            </div>
+                                                            <div class="table-Valor">
+                                                                <label>
+                                                                    <b>$911.725,59</b>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 scrollpoint sp-effect5" style="text-align:center; vertical-align:middle;">
+                                                            <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
+                                                                <label>
+                                                                    <b>Total del Pago</b>
+                                                                </label>
+                                                            </div>
+                                                            <div class="table-Valor">
+                                                                <label>
+                                                                    <b>$10.940.707,07</b>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2 scrollpoint sp-effect5 openDatails">
+                                                            <div style="color: #0aabe1;">
+                                                                <h3 class="btn btn-primary"><b>Ver Detalle</b></h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="panel panel-default">
+                                                    <div class="row">
+                                                        <div class="col-md-4 scrollpoint sp-effect5">
+                                                            <div class="table-item">
+                                                                <div class="scrollpoint sp-effect5">
+                                                                    <img src="Img/citibank.png" alt="" class="table-imgOferta" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2 scrollpoint sp-effect5">
+                                                            <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
+                                                                <label>
+                                                                    <b>Tasa Mensual</b>
+                                                                </label>
+                                                            </div>
+                                                            <div class="table-Valor">
+                                                                <label>
+                                                                    <b>1.94 %</b>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 scrollpoint sp-effect5" style="text-align:center; vertical-align:middle;">
+                                                            <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
+                                                                <label>
+                                                                    <b>Cuota Mensual</b>
+                                                                </label>
+                                                            </div>
+                                                            <div class="table-Valor">
+                                                                <label>
+                                                                    <b>$942.029,65</b>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-2 scrollpoint sp-effect5" style="text-align:center; vertical-align:middle;">
+                                                            <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
+                                                                <label>
+                                                                    <b>Total del Pago</b>
+                                                                </label>
+                                                            </div>
+                                                            <div class="table-Valor">
+                                                                <label>
+                                                                    <b>$11.304.355,76</b>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2 scrollpoint sp-effect5 openDatails">
+                                                            <div style="color: #0aabe1;">
+                                                                <h3 class="btn btn-primary"><b>Ver Detalle</b></h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <br />
+                                        Captura los datos de las filas seleccionadas en el click del botón de comparar
+                                        <pre id="display-json"></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="screens">
+            <div class="section-heading scrollpoint sp-effect3">
+                <h1>Compara las mejores ofertas</h1>
+                <div class="divider"></div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 contact-details scrollpoint sp-effect2 wow bounceInUp" data-wow-duration="1s">
+                            <div style="border :3px solid transparent;">
+                                <select class="selectpicker" data-style="btn-info" style="display: none;">
+                                    <option>BBVA</option>
+                                    <option>BANCOLOMBIA</option>
+                                    <option>AV VILLAS</option>
+                                    <option>COLPATRIA</option>
+                                    <option>CAJA SOCIAL</option>
+                                    <option>POPULAR</option>
+                                </select>
+                            </div>
+                            <div class="price-block">
+                                <div class="panel panel-default oferta">
+                                    <div class="price-header" style="z-index:999999!important;">
+                                        <h3>BBVA</h3>
+                                        <div class="filtering scrollpoint sp-effect5" style=" height:120%;">
+                                            <img src="Img/bbva.png" alt="" class="imgOferta" />
+                                        </div>
+                                    </div>
+                                    <div class="price-plan-good">
+                                        <ul>
+                                            <li>
+                                                <span>1.41</span>
+                                                <label>% por mes</label>
+                                                <img src="assets/img/check.png" />
+                                            </li>
+                                            <li>
+                                                <span>$911.725,59</span>
+                                                <label>/ por mes</label>
+                                                <img src="assets/img/check.png" />
+                                            </li>
+                                            <li>
+                                                <span>18.81</span>
+                                                <label>% por año</label>
+                                                <img src="assets/img/check.png" />
+                                            </li>
+                                            <li>
+                                                <span>$10.940.707,07</span>
+                                                <label>/ Total</label>
+                                                <img src="assets/img/check.png" />
+                                            </li>
+                                            <li>
+                                                <span>$940.707,07</span>
+                                                <label>/ Total Intereses</label>
+                                                <img src="assets/img/check.png" />
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#detail1"><b>Más detalles</b></button>
+                                                <div id="detail1" class="collapse out">
+                                                    <span class="month">Adicionales</span>
+                                                    <p style="font-size:10pt;">
+                                                        Costo de Portes (mensual): $ 0<br />
+                                                        Seguro de Vida: 0,000% MV<br />
+                                                        Com. Estudio Crédito (sin IVA): $ 0<br />
+                                                    </p>
+                                                    <span class="month">Requisitos</span>
+                                                    <p style="font-size:10pt;">
+                                                        Tipo de Contrato: Contrato a término indefinido con 2 años de antigüedad o contrato a término fijo con mínimo 2 renovaciones anuales o independiente con 2 años en la actividad; con un menor tiempo se requiere codeudor, al igual que las personas independientes.
+                                                        <br />
+                                                        Ingresos: Mínimo 5 salarios mínimos legales mensuales vigentes.
+                                                        <br />
+                                                        Edad: De 23 a 65 años., siempre y cuando la persona sea asegurable
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.Comparar -->
+                        </div>
+                        <div class="col-md-4 col-sm-4 contact-details scrollpoint sp-effect2 wow bounceInUp" data-wow-duration="2s">
+                            <div class="price-block active">
+                                <div class="panel panel-default oferta">
+                                    <div class="price-header-mxc">
+                                        <h3>MaxiCrédito</h3>
+                                        <div class="scrollpoint sp-effect5">
+                                            <img src="Img/mxc.png" />
+                                        </div>
+                                    </div>
+                                    <div class="price-plan">
+                                        <ul>
+                                            <li>
+                                                <span class="price"><i class="fa fa-chevron-circle-left fa-1x"></i>&nbsp;&nbsp;TASA MENSUAL&nbsp;&nbsp;<i class="fa fa-chevron-circle-right  fa-1x"></i></span>
+                                            </li>
+                                            <li>
+                                                <span class="price"><i class="fa fa-chevron-circle-left fa-1x"></i>&nbsp;&nbsp;CUOTA MENSUAL&nbsp;&nbsp;<i class="fa fa-chevron-circle-right  fa-1x"></i></span>
+                                            </li>
+                                            <li>
+                                                <span class="price"><i class="fa fa-chevron-circle-left fa-1x"></i>&nbsp;&nbsp;TASA ANUAL&nbsp;&nbsp;<i class="fa fa-chevron-circle-right  fa-1x"></i></span>
+                                            </li>
+                                            <li>
+                                                <span class="price"><i class="fa fa-chevron-circle-left fa-1x"></i>&nbsp;&nbsp;PAGO TOTAL&nbsp;&nbsp;<i class="fa fa-chevron-circle-right  fa-1x"></i></span>
+                                            </li>
+                                            <li>
+                                                <span class="price"><i class="fa fa-chevron-circle-left fa-1x"></i>&nbsp;&nbsp;INTERES TOTAL APAGAR&nbsp;&nbsp;<i class="fa fa-chevron-circle-right  fa-1x"></i></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.price-block -->
+                        </div>
+                        <div class="col-md-4 contact-details scrollpoint sp-effect2 wow bounceInUp" data-wow-duration="3s">
+                            <div style="border :3px solid transparent;">
+                                <select class="selectpicker" data-style="btn-info" style="display: none;">
+                                    <option>CITIBANK</option>
+                                    <option>BANCOLOMBIA</option>
+                                    <option>AV VILLAS</option>
+                                    <option>COLPATRIA</option>
+                                    <option>CAJA SOCIAL</option>
+                                    <option>POPULAR</option>
+                                </select>
+                            </div>
+                            <div class="price-block">
+                                <div class="panel panel-default oferta">
+                                    <div class="price-header">
+                                        <h3>CITIBANK</h3>
+                                        <div class="scrollpoint sp-effect5" style=" height:120%;">
+                                            <img src="Img/citibank.png" alt="" class="imgOferta" />
+                                        </div>
+                                    </div>
+                                    <div class="price-plan-bad">
+                                        <ul>
+                                            <li>
+                                                <span>1,94</span>
+                                                <label>% por mes</label>
+                                                <img src="assets/img/bad.png" />
+                                            </li>
+                                            <li>
+                                                <span>$942.029,65</span>
+                                                <label>/por mes</label>
+                                                <img src="assets/img/bad.png" />
+                                            </li>
+                                            <li>
+                                                <span>25,91</span>
+                                                <label>% por año</label>
+                                                <img src="assets/img/bad.png" />
+                                            </li>
+                                            <li>
+                                                <span>$11.304.355,76</span>
+                                                <label>/Total</label>
+                                                <img src="assets/img/bad.png" />
+                                            </li>
+                                            <li>
+                                                <span>$1.304.355,76</span>
+                                                <label>/Total Intereses</label>
+                                                <img src="assets/img/bad.png" />
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#detail3"><b>Más detalles</b></button>
+                                                <div id="detail3" class="collapse out">
+                                                    <span class="month">Adicionales</span>
+                                                    <p style="font-size:10pt;">
+                                                        Costo de Portes (mensual): $ 0<br />
+                                                        Seguro de Vida: 0,000% MV<br />
+                                                        Com. Estudio Crédito (sin IVA): $ 12.000<br />
+                                                    </p>
+                                                    <span class="month">Requisitos</span>
+                                                    <p style="font-size:10pt;">
+                                                        Solicitud de vinculación y contratación de productos persona natural.<br />
+                                                        Fotocopia del documento de identidad, ampliada al 150%.<br />
+                                                        Fotocopia del Certificado de Ingresos y Retenciones y/o Declaración de renta.<br />
+                                                        Certificado laboral original con vigencia no mayor a 45 días, indicando cargo, salario, tiempo de servicio y tipo de contrato.<br />
+                                                        Fotocopia del último comprobante de pago de nómina o pensión; si los ingresos son variables los tres (3) últimos comprobantes.<br />
+                                                        Extractos bancarios personales de los tres (3) últimos meses.<br />
+                                                        Contratos, certificados o documentos que acrediten otros ingresos no laborales como honorarios, prestación de servicios, intereses por inversión de capital (opcional para Asalariados y Pensionados).<br />
+                                                        Certificado de tradición y libertad.<br />
+                                                        Aplica sólo para créditos mayores a $30 millones, siempre y cuando el monto supere ocho (8) veces el ingreso.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.price-block -->
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="#screens" class="btn btn-mxc col-xs-12" id="btnPromo"><b>ACTIVAR SCANNER DE OFERTAS</b></a>
+                </div>
+            </div>
+        </section>
+
+        <div id="modal" class="modal-demo">
+            <button type="button" class="close" onclick="Custombox.close();">
+                <span>&times;</span><span class="sr-only">Close</span>
+            </button>
+            <br />
+            <div class="text">
+                <div class="price-block">
+                    <div class="panel panel-default oferta">
+                        <div class="price-header">
+                            <div class="filtering scrollpoint sp-effect5 col-sm-6">
+                                <p style="color:white; font-weight:bold; font-size:14pt;">Con el SCANNER DE OFERTAS recibes de forma rapida y constante notificaciones sobre productos financieros que se ajustan a tus necesidades.</p>
+                            </div>
+                            <div class="filtering scrollpoint sp-effect5 col-sm-6">
+                                <img src="assets/img/oferta.png" />
+                            </div>
+                        </div>
+                        <div class="price-plan">
+                            <ul>
+                                <li>
+                                    <label class="notificationHeader">Es muy fácil, solo agrega tus datos básicos, selecciona el tipo de notificación y Activa el scanner de ofertas</label>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <div class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="sr-only" for="txtName">Nombre:</label>
+                                                            <div class="col-md-12">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+                                                                    <input type="text" class="form-control" id="txtName" placeholder="Nombre y Apellidos">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="sr-only" for="txtEmail">Email:</label>
+                                                            <div class="col-md-12">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></div>
+                                                                    <input type="text" class="form-control" id="txtEmail" placeholder="Correo electrónico">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="sr-only" for="txtPhone">Teléfono Móvil:</label>
+                                                            <div class="col-md-12">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-addon"><i class="fa fa-phone fa-fw"></i></div>
+                                                                    <input type="text" class="form-control" id="txtPhone" placeholder="Número Teléfono Móvil">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-inline">
+                                                        <div class="form-group col-md-4 col-sm-4" style="text-align:left;">
+                                                            <input type="checkbox" name="cbEmail" id="cbEmail" checked="checked" />
+                                                            <label for="cbEmail" class="notification">
+                                                                Email
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group col-md-4 col-sm-4" style="text-align:left;">
+                                                            <input type="checkbox" name="cbSMS" id="cbSMS" checked="checked" />
+                                                            <label for="cbSMS" class="notification">
+                                                                Notificación a Tu SmartPhone
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group col-md-4 col-sm-4" style="text-align:left;">
+                                                            <input type="checkbox" name="cbSmart" id="cbSmart" checked="checked" />
+                                                            <label for="cbSmart" class="notification">
+                                                                Mensaje de Texto
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-mxc col-md-12"><b>Activar Scanner de Ofertas</b></button>
+                                                </div>
+                                            </div>
+                                            <div class="form-inline">
+                                                <div class="form-group col-md-12" style="text-align:right;">
+                                                    <input type="checkbox" name="cbEmail" id="cbTerminosScanner" />
+                                                    <label for="cbTerminosScanner" class="notification">
+                                                        Acepto Terminos y Condiciones
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Popup Detalle de la oferta-->
+        <div id="modalDetalle" class="modal-demo">
+            <button type="button" class="close" onclick="Custombox.close();">
+                <span>&times;</span><span class="sr-only">Close</span>
+            </button>
+            <br />
+            <div class="text">
+                <div class="price-block">
+                    <div class="panel panel-default oferta">
+                        <div class="price-header">
+                            <div class="filtering scrollpoint sp-effect5 col-md-12">
+                                <img src="assets/img/oferta.png" />
+                            </div>
+                        </div>
+                        <div class="price-plan">
+                            <ul>
+                                <li>
+                                    <label class="notificationHeader">Crédito Libre Inversión - Plazo 12 meses - Monto del crédito 10.000.000</label>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <div>
+                                                        Detalle de la oferta - Terminos y condiciones
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <a href="#" class="scrollpoint sp-effect3">
+                    <img src="assets/img/freeze/logo.png" alt="" class="logo">
+                </a>
+                <div class="social">
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-google-plus fa-lg"></i></a>
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                </div>
+                <div class="rights">
+                    <p>Copyright &copy; 2014</p>
+                    <p><b>Ricardo Restrepo - German Bernal - John Sierra - Sergios Rios</b></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <div id="slideIzq" class="panel panel-default oferta">
+        <div class="price-block">
+            <div class="price-header-promo">
+                <div class="filtering scrollpoint sp-effect5 col-md-12">
+                    <img src="assets/img/oferta.png" width="90" height="150" />
+                </div>
+            </div>
+            <div class="price-plan">
+                <ul>
+                    <li>
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <p style="font-weight:bold; font-size:22px;" class="price">
+                                        Activa ya el <span class="price">SCANNER</span> y recibe las mejores ofertas de crédito.
+                                    </p>
+                                    <p style="font-weight:bold; font-size:22px;" class="month">
+                                        ES GRATIS
+                                    </p>
+                                    <p style="color:#56C201;font-weight:bold; font-size:26px; text-decoration:underline;">
+                                        Actívalo AQUÍ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/placeholdem.min.js"></script>
+    <script src="assets/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/slider/bootstrap-slider.min.js"></script>
+    <!--icheck-->
+    <link href="assets/icheck/css/blue.css" rel="stylesheet" />
+    <link href="assets/css/content/style.css" rel="stylesheet" />
+    <script src="assets/icheck/icheck.js"></script>
+    <!--popup-->
+    <script src="assets/js/popup/custombox.js" type="text/javascript"></script>
+    <script src="assets/js/popup/legacy.js" type="text/javascript"></script>
+
+    <script src="assets/js/bootstrap-select.js"></script>
+    <!--popup-->
+    <!--icheck-->
+    <script>
+        $(document).ready(function () {
+            appMaster.preLoader();
+
+            /* Example 6 */
+            $("#ex6").slider({
+                tooltip: 'show'
+            });
+
+            $("#ex6").on('slide', function (slideEvt) {
+                $("#lblTerm").text(slideEvt.value);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        var specialKeys = new Array();
+        specialKeys.push(8); //Backspace
+        specialKeys.push(46);
+        function IsNumeric(e) {
+            var keyCode = e.which ? e.which : e.keyCode
+            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+            return ret;
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' // optional
+            });
+        });
+
+        $(function () {
+            $('.list-group.checked-list-box .list-group-item').each(function () {
+
+                // Settings
+                var $widget = $(this),
+                    $checkbox = $('<input type="checkbox" class="hidden" />'),
+                    color = ($widget.data('color') ? $widget.data('color') : "default"),
+                    style = ($widget.data('style') == "button" ? "btn-" : "list-group-item-"),
+                    settings = {
+                        on: {
+                            icon: 'check'
+                        },
+                        off: {
+                            icon: ''
+                        }
+                    };
+
+                $widget.css('cursor', 'pointer')
+                $widget.append($checkbox);
+
+                // Event Handlers
+                $widget.on('click', function () {
+                    $checkbox.prop('checked', !$checkbox.is(':checked'));
+                    $checkbox.triggerHandler('change');
+                    updateDisplay();
+                });
+                $checkbox.on('change', function () {
+                    updateDisplay();
+                });
+
+
+                // Actions
+                function updateDisplay() {
+                    var isChecked = $checkbox.is(':checked');
+
+                    // Set the button's state
+                    $widget.data('state', (isChecked) ? "on" : "off");
+
+                    // Set the button's icon
+                    $widget.find('.state-icon')
+                        .removeClass()
+                        .addClass('state-icon ' + settings[$widget.data('state')].icon);
+
+                    // Update the button's color
+                    if (isChecked) {
+                        $widget.addClass(style + color + ' active');
+                    } else {
+                        $widget.removeClass(style + color + ' active');
+                    }
+                }
+
+                // Initialization
+                function init() {
+
+                    if ($widget.data('checked') == true) {
+                        $checkbox.prop('checked', !$checkbox.is(':checked'));
+                    }
+
+                    updateDisplay();
+
+                    // Inject the icon if applicable
+                    if ($widget.find('.state-icon').length == 0) {
+                        $widget.prepend('<span class="state-icon ' + settings[$widget.data('state')].icon + '"></span>');
+                    }
+                }
+                init();
+            });
+
+            $('#get-checked-data').on('click', function (event) {
+                event.preventDefault();
+                var checkedItems = {}, counter = 0;
+                $("#check-list-box li.active").each(function (idx, li) {
+                    checkedItems[counter] = $(li).text().replace("\n", "|").replace(" ", "");
+                    counter++;
+                });
+
+                $('#display-json').html(JSON.stringify(checkedItems, null, '\t'));
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $('#btnPromo').on('click', function (e) {
+                Custombox.open({
+                    target: '#modal',
+                    effect: 'newspaper',
+                    overlayClose: false,
+                    overlayColor: '#fff'
+                });
+                e.preventDefault();
+            });
+
+            $('#slideIzq').on('click', function (e) {
+                Custombox.open({
+                    target: '#modal',
+                    effect: 'newspaper',
+                    overlayClose: false,
+                    overlayColor: '#fff'
+                });
+                e.preventDefault();
+            });
+
+
+            $('.selectpicker').addClass('col-lg-12').selectpicker('setStyle');
+
+            $('.openDatails').on('click', function (e) {
+                Custombox.open({
+                    target: '#modalDetalle',
+                    effect: 'swell',
+                    overlayClose: true,
+                    overlayColor: '#fff'
+                });
+                e.preventDefault();
+            });
+        });
+
+        $(document).ready(function () {
+            var s = $("#sticker");
+            var pos = s.position();
+            $(window).scroll(function () {
+                var windowpos = $(window).scrollTop();
+                s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+                if (windowpos >= pos.top) {
+                    s.addClass("stick");
+                } else {
+                    s.removeClass("stick");
+                }
+            });
+
+            $("#slideIzq").hide();
+            setInterval(showScanner, 20000);
+        });
+
+        function showScanner() {
+            $("#slideIzq").animate({
+                width: "toggle", opacity: "toggle",
+                right: "50px",
+                bottom: "50px"
+            }, 500).css('position', 'fixed');
+
+
+
+            setTimeout(function () {
+                $("#slideIzq").animate({
+                    width: "toggle",
+                    opacity: "toggle",
+                    right: "50px",
+                    bottom: "50px"
+                }, 500).css('position', 'fixed');
+            }, 7000);
+        }
+
+
+    </script>
+</body>
+</html>

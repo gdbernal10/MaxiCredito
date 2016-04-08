@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{648916A8-225E-4113-8DA6-6D55A990C8E5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaxiCredito</RootNamespace>
+    <AssemblyName>MaxiCredito</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\ajax-loader.gif" />
+    <Content Include="assets\css\animate.css" />
+    <Content Include="assets\css\bootstrap-select.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\checkbox\checkBox.css" />
+    <Content Include="assets\css\content\style.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\popup\custombox.css" />
+    <Content Include="assets\css\slick.css" />
+    <Content Include="assets\css\styles.css" />
+    <Content Include="assets\fonts\flexslider-icon.svg" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\icheck\css\banner.jpg" />
+    <Content Include="assets\icheck\css\blue%402x.png" />
+    <Content Include="assets\icheck\css\blue.css" />
+    <Content Include="assets\icheck\css\blue.png" />
+    <Content Include="assets\icheck\css\custom.css" />
+    <Content Include="assets\icheck\css\icheck.png" />
+    <Content Include="assets\icheck\css\ie\arrow-bottom.png" />
+    <Content Include="assets\icheck\css\ie\arrow-top.png" />
+    <Content Include="assets\icheck\css\ie\header-line.png" />
+    <Content Include="assets\icheck\css\ie\icon-fork.png" />
+    <Content Include="assets\icheck\css\ie\icon-github.png" />
+    <Content Include="assets\icheck\css\ie\icon-lab.png" />
+    <Content Include="assets\icheck\css\ie\icon-options.png" />
+    <Content Include="assets\icheck\css\ie\icon-star.png" />
+    <Content Include="assets\icheck\css\montserrat-bold.svg" />
+    <Content Include="assets\icheck\css\montserrat-regular.svg" />
+    <Content Include="assets\icheck\css\normalize.css" />
+    <Content Include="assets\icheck\icheck.js" />
+    <Content Include="assets\icheck\icheck.min.js" />
+    <Content Include="assets\icheck\js\custom.js" />
+    <Content Include="assets\icheck\js\custom.min.js" />
+    <Content Include="assets\icheck\js\jquery.js" />
+    <Content Include="assets\icheck\js\zepto.js" />
+    <Content Include="assets\icheck\skins\all.css" />
+    <Content Include="assets\icheck\skins\flat\aero%402x.png" />
+    <Content Include="assets\icheck\skins\flat\aero.css" />
+    <Content Include="assets\icheck\skins\flat\aero.png" />
+    <Content Include="assets\icheck\skins\flat\blue%402x.png" />
+    <Content Include="assets\icheck\skins\flat\blue.css" />
+    <Content Include="assets\icheck\skins\flat\blue.png" />
+    <Content Include="assets\icheck\skins\flat\flat%402x.png" />
+    <Content Include="assets\icheck\skins\flat\flat.css" />
+    <Content Include="assets\icheck\skins\flat\flat.png" />
+    <Content Include="assets\icheck\skins\flat\green%402x.png" />
+    <Content Include="assets\icheck\skins\flat\green.css" />
+    <Content Include="assets\icheck\skins\flat\green.png" />
+    <Content Include="assets\icheck\skins\flat\grey%402x.png" />
+    <Content Include="assets\icheck\skins\flat\grey.css" />
+    <Content Include="assets\icheck\skins\flat\grey.png" />
+    <Content Include="assets\icheck\skins\flat\orange%402x.png" />
+    <Content Include="assets\icheck\skins\flat\orange.css" />
+    <Content Include="assets\icheck\skins\flat\orange.png" />
+    <Content Include="assets\icheck\skins\flat\pink%402x.png" />
+    <Content Include="assets\icheck\skins\flat\pink.css" />
+    <Content Include="assets\icheck\skins\flat\pink.png" />
+    <Content Include="assets\icheck\skins\flat\purple%402x.png" />
+    <Content Include="assets\icheck\skins\flat\purple.css" />
+    <Content Include="assets\icheck\skins\flat\purple.png" />
+    <Content Include="assets\icheck\skins\flat\red%402x.png" />
+    <Content Include="assets\icheck\skins\flat\red.css" />
+    <Content Include="assets\icheck\skins\flat\red.png" />
+    <Content Include="assets\icheck\skins\flat\yellow%402x.png" />
+    <Content Include="assets\icheck\skins\flat\yellow.css" />
+    <Content Include="assets\icheck\skins\flat\yellow.png" />
+    <Content Include="assets\icheck\skins\flat\_all.css" />
+    <Content Include="assets\icheck\skins\futurico\futurico%402x.png" />
+    <Content Include="assets\icheck\skins\futurico\futurico.css" />
+    <Content Include="assets\icheck\skins\futurico\futurico.png" />
+    <Content Include="assets\icheck\skins\line\aero.css" />
+    <Content Include="assets\icheck\skins\line\blue.css" />
+    <Content Include="assets\icheck\skins\line\green.css" />
+    <Content Include="assets\icheck\skins\line\grey.css" />
+    <Content Include="assets\icheck\skins\line\line%402x.png" />
+    <Content Include="assets\icheck\skins\line\line.css" />
+    <Content Include="assets\icheck\skins\line\line.png" />
+    <Content Include="assets\icheck\skins\line\orange.css" />
+    <Content Include="assets\icheck\skins\line\pink.css" />
+    <Content Include="assets\icheck\skins\line\purple.css" />
+    <Content Include="assets\icheck\skins\line\red.css" />
+    <Content Include="assets\icheck\skins\line\yellow.css" />
+    <Content Include="assets\icheck\skins\line\_all.css" />
+    <Content Include="assets\icheck\skins\minimal\aero%402x.png" />
+    <Content Include="assets\icheck\skins\minimal\aero.css" />
+    <Content Include="assets\icheck\skins\minimal\aero.png" />
+    <Content Include="assets\icheck\skins\minimal\blue%402x.png" />
+    <Content Include="assets\icheck\skins\minimal\blue.css" />
+    <Content Include="assets\icheck\skins\minimal\blue.png" />
+    <Content Include="assets\icheck\skins\minimal\green%402x.png" />
+    <Content Include="assets\icheck\skins\minimal\green.css" />
+    <Content Include="assets\icheck\skins\minimal\green.png" />
+    <Content Include="assets\icheck\skins\minimal\grey%402x.png" />
+    <Content Include="assets\icheck\skins\minimal\grey.css" />
+    <Content Include="assets\icheck\skins\minimal\grey.png" />
+    <Content Include="assets\icheck\skins\minimal\minimal%402x.png" />
+    <Content Include="assets\icheck\skins\minimal\minimal.css" />
+    <Content Include="assets\icheck\skins\minimal\minimal.png" />
+    <Content Include="assets\icheck\skins\minimal\orange%402x.png" />
+    <Content Include="assets\icheck\skins\minimal\orange.css" />
+    <Content Include="assets\icheck\skins\minimal\orange.png" />
+    <Content Include="assets\icheck\skins\minimal\pink%402x.png" />
+    <Content Include="assets\icheck\skins\minimal\pink.css" />
+    <Content Include="assets\icheck\skins\minimal\pink.png" />
+    <Content Include="assets\icheck\skins\minimal\purple%402x.png" />
+    <Content Include="assets\icheck\skins\minimal\purple.css" />
+    <Content Include="assets\icheck\skins\minimal\purple.png" />
+    <Content Include="assets\icheck\skins\minimal\red%402x.png" />
+    <Content Include="assets\icheck\skins\minimal\red.css" />
+    <Content Include="assets\icheck\skins\minimal\red.png" />
+    <Content Include="assets\icheck\skins\minimal\yellow%402x.png" />
+    <Content Include="assets\icheck\skins\minimal\yellow.css" />
+    <Content Include="assets\icheck\skins\minimal\yellow.png" />
+    <Content Include="assets\icheck\skins\minimal\_all.css" />
+    <Content Include="assets\icheck\skins\polaris\polaris%402x.png" />
+    <Content Include="assets\icheck\skins\polaris\polaris.css" />
+    <Content Include="assets\icheck\skins\polaris\polaris.png" />
+    <Content Include="assets\icheck\skins\square\aero%402x.png" />
+    <Content Include="assets\icheck\skins\square\aero.css" />
+    <Content Include="assets\icheck\skins\square\aero.png" />
+    <Content Include="assets\icheck\skins\square\blue%402x.png" />
+    <Content Include="assets\icheck\skins\square\blue.css" />
+    <Content Include="assets\icheck\skins\square\blue.png" />
+    <Content Include="assets\icheck\skins\square\green%402x.png" />
+    <Content Include="assets\icheck\skins\square\green.css" />
+    <Content Include="assets\icheck\skins\square\green.png" />
+    <Content Include="assets\icheck\skins\square\grey%402x.png" />
+    <Content Include="assets\icheck\skins\square\grey.css" />
+    <Content Include="assets\icheck\skins\square\grey.png" />
+    <Content Include="assets\icheck\skins\square\orange%402x.png" />
+    <Content Include="assets\icheck\skins\square\orange.css" />
+    <Content Include="assets\icheck\skins\square\orange.png" />
+    <Content Include="assets\icheck\skins\square\pink%402x.png" />
+    <Content Include="assets\icheck\skins\square\pink.css" />
+    <Content Include="assets\icheck\skins\square\pink.png" />
+    <Content Include="assets\icheck\skins\square\purple%402x.png" />
+    <Content Include="assets\icheck\skins\square\purple.css" />
+    <Content Include="assets\icheck\skins\square\purple.png" />
+    <Content Include="assets\icheck\skins\square\red%402x.png" />
+    <Content Include="assets\icheck\skins\square\red.css" />
+    <Content Include="assets\icheck\skins\square\red.png" />
+    <Content Include="assets\icheck\skins\square\square%402x.png" />
+    <Content Include="assets\icheck\skins\square\square.css" />
+    <Content Include="assets\icheck\skins\square\square.png" />
+    <Content Include="assets\icheck\skins\square\yellow%402x.png" />
+    <Content Include="assets\icheck\skins\square\yellow.css" />
+    <Content Include="assets\icheck\skins\square\yellow.png" />
+    <Content Include="assets\icheck\skins\square\_all.css" />
+    <Content Include="assets\img\bad.png" />
+    <Content Include="assets\img\check.png" />
+    <Content Include="assets\img\freeze\bk-freeze-ga.jpg" />
+    <Content Include="assets\img\freeze\bk-freeze.jpg" />
+    <Content Include="assets\img\freeze\freeze-angled2.png" />
+    <Content Include="assets\img\freeze\iphone-freeze.png" />
+    <Content Include="assets\img\freeze\logo.png" />
+    <Content Include="assets\img\freeze\screens\calendar.jpg" />
+    <Content Include="assets\img\freeze\screens\menu.jpg" />
+    <Content Include="assets\img\freeze\screens\options.jpg" />
+    <Content Include="assets\img\freeze\screens\profile.jpg" />
+    <Content Include="assets\img\freeze\screens\sales.jpg" />
+    <Content Include="assets\img\freeze\screens\signup.jpg" />
+    <Content Include="assets\img\freeze\screens\weather.jpg" />
+    <Content Include="assets\img\freeze\Slides\Credito 2.png" />
+    <Content Include="assets\img\freeze\Slides\Credito 3.png" />
+    <Content Include="assets\img\freeze\Slides\Credito 4.png" />
+    <Content Include="assets\img\freeze\Slides\Credito 5.png" />
+    <Content Include="assets\img\freeze\Slides\Credito.png" />
+    <Content Include="assets\img\freeze\Slides\family-freeze.png" />
+    <Content Include="assets\img\freeze\Slides\family-freeze2.png" />
+    <Content Include="assets\img\freeze\Slides\freeze-slide2 2.png" />
+    <Content Include="assets\img\freeze\Slides\freeze-slide2.png" />
+    <Content Include="assets\img\freeze\Slides\hand-freeze.png" />
+    <Content Include="assets\img\freeze\Slides\hand-freeze3.png" />
+    <Content Include="assets\img\oferta.png" />
+    <Content Include="assets\img\transparent.png" />
+    <Content Include="assets\js\bootstrap-select.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-1.11.1.min.js" />
+    <Content Include="assets\js\less-1.7.0.min.js" />
+    <Content Include="assets\js\modernizr.custom.32033.js" />
+    <Content Include="assets\js\placeholdem.min.js" />
+    <Content Include="assets\js\popup\custombox.js" />
+    <Content Include="assets\js\popup\legacy.js" />
+    <Content Include="assets\js\rs-plugin\assets\arrowleft.png" />
+    <Content Include="assets\js\rs-plugin\assets\arrowright.png" />
+    <Content Include="assets\js\rs-plugin\assets\arrow_large_left.png" />
+    <Content Include="assets\js\rs-plugin\assets\arrow_large_right.png" />
+    <Content Include="assets\js\rs-plugin\assets\arrow_left.png" />
+    <Content Include="assets\js\rs-plugin\assets\arrow_left2.png" />
+    <Content Include="assets\js\rs-plugin\assets\arrow_right.png" />
+    <Content Include="assets\js\rs-plugin\assets\arrow_right2.png" />
+    <Content Include="assets\js\rs-plugin\assets\black50.png" />
+    <Content Include="assets\js\rs-plugin\assets\boxed_bgtile.png" />
+    <Content Include="assets\js\rs-plugin\assets\bullet.png" />
+    <Content Include="assets\js\rs-plugin\assets\bullets.png" />
+    <Content Include="assets\js\rs-plugin\assets\bullets2.png" />
+    <Content Include="assets\js\rs-plugin\assets\bullet_boxed.png" />
+    <Content Include="assets\js\rs-plugin\assets\coloredbg.png" />
+    <Content Include="assets\js\rs-plugin\assets\grain.png" />
+    <Content Include="assets\js\rs-plugin\assets\gridtile.png" />
+    <Content Include="assets\js\rs-plugin\assets\gridtile_3x3.png" />
+    <Content Include="assets\js\rs-plugin\assets\gridtile_3x3_white.png" />
+    <Content Include="assets\js\rs-plugin\assets\gridtile_white.png" />
+    <Content Include="assets\js\rs-plugin\assets\large_left.png" />
+    <Content Include="assets\js\rs-plugin\assets\large_right.png" />
+    <Content Include="assets\js\rs-plugin\assets\loader.gif" />
+    <Content Include="assets\js\rs-plugin\assets\loader2.gif" />
+    <Content Include="assets\js\rs-plugin\assets\navigdots.png" />
+    <Content Include="assets\js\rs-plugin\assets\navigdots_bgtile.png" />
+    <Content Include="assets\js\rs-plugin\assets\shadow1.png" />
+    <Content Include="assets\js\rs-plugin\assets\shadow2.png" />
+    <Content Include="assets\js\rs-plugin\assets\shadow3.png" />
+    <Content Include="assets\js\rs-plugin\assets\small_left.png" />
+    <Content Include="assets\js\rs-plugin\assets\small_left_boxed.png" />
+    <Content Include="assets\js\rs-plugin\assets\small_right.png" />
+    <Content Include="assets\js\rs-plugin\assets\small_right_boxed.png" />
+    <Content Include="assets\js\rs-plugin\assets\timer.png" />
+    <Content Include="assets\js\rs-plugin\assets\timerdot.png" />
+    <Content Include="assets\js\rs-plugin\assets\transparent.jpg" />
+    <Content Include="assets\js\rs-plugin\assets\white50.png" />
+    <Content Include="assets\js\rs-plugin\css\settings-ie8.css" />
+    <Content Include="assets\js\rs-plugin\css\settings.css" />
+    <Content Include="assets\js\rs-plugin\font\revicons.svg" />
+    <Content Include="assets\js\rs-plugin\images\decor_inside.png" />
+    <Content Include="assets\js\rs-plugin\images\decor_inside_white.png" />
+    <Content Include="assets\js\rs-plugin\images\decor_testimonial.png" />
+    <Content Include="assets\js\rs-plugin\images\gradient\g30.png" />
+    <Content Include="assets\js\rs-plugin\images\gradient\g40.png" />
+    <Content Include="assets\js\rs-plugin\js\jquery.themepunch.plugins.min.js" />
+    <Content Include="assets\js\rs-plugin\js\jquery.themepunch.revolution.js" />
+    <Content Include="assets\js\rs-plugin\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="assets\js\scripts.js" />
+    <Content Include="assets\js\slick.min.js" />
+    <Content Include="assets\js\slider\bootstrap-slider.js" />
+    <Content Include="assets\js\slider\bootstrap-slider.min.js" />
+    <Content Include="assets\js\slider\css\bootstrap-slider.css" />
+    <Content Include="assets\js\slider\css\bootstrap-slider.min.css" />
+    <Content Include="assets\js\slider\css\slider.css" />
+    <Content Include="assets\js\slider\js\bootstrap-slider.js" />
+    <Content Include="assets\js\waypoints.min.js" />
+    <Content Include="dist\Documentation\index.html" />
+    <Content Include="favicon.png" />
+    <Content Include="gruntfile.js" />
+    <Content Include="Img\1.png" />
+    <Content Include="Img\bbva.png" />
+    <Content Include="Img\citibank.png" />
+    <Content Include="Img\mxc.png" />
+    <Content Include="index.html" />
+    <Content Include="preview.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="assets\css\bootstrap.css.map" />
+    <Content Include="assets\fonts\flexslider-icon.eot" />
+    <Content Include="assets\fonts\flexslider-icon.ttf" />
+    <Content Include="assets\fonts\flexslider-icon.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\js\jquery-1.11.1.min.map" />
+    <Content Include="assets\js\rs-plugin\assets\arrows.psd" />
+    <Content Include="assets\js\rs-plugin\assets\bullets.psd" />
+    <Content Include="assets\js\rs-plugin\assets\small_arrows.psd" />
+    <Content Include="assets\js\rs-plugin\css\.DS_Store" />
+    <Content Include="assets\js\rs-plugin\font\revicons.eot" />
+    <Content Include="assets\js\rs-plugin\font\revicons.ttf" />
+    <Content Include="assets\js\rs-plugin\font\revicons.woff" />
+    <Content Include="assets\js\rs-plugin\js\.DS_Store" />
+    <Content Include="assets\less\colors.less" />
+    <Content Include="assets\less\lib.less" />
+    <Content Include="assets\less\styles.less" />
+    <Content Include="dist\Logos\themelogos.psd" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="assets\js\slider\less\slider.less" />
+    <Content Include="assets\icheck\css\custom.styl" />
+    <Content Include="assets\icheck\css\montserrat-bold.eot" />
+    <Content Include="assets\icheck\css\montserrat-bold.ttf" />
+    <Content Include="assets\icheck\css\montserrat-bold.woff" />
+    <Content Include="assets\icheck\css\montserrat-regular.eot" />
+    <Content Include="assets\icheck\css\montserrat-regular.ttf" />
+    <Content Include="assets\icheck\css\montserrat-regular.woff" />
+    <Content Include="assets\css\bootstrap.3.3.4.css" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9621</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9621/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

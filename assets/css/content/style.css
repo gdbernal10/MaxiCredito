@@ -1,0 +1,348 @@
+
+/*
+========================================================================
+# 10 - Pricing table styles
+------------------------------------------------------------------------
+*/
+ul {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.pricingtable-section {
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.price-block {
+    margin-bottom: 20px;
+}
+
+.price-header {
+    background: #0aabe1;
+    padding: 20px;
+    text-align: center;
+    height: 180px;
+    overflow: hidden;
+    z-index:999999!important;
+}
+
+.price-header-mxc {
+    background: #0aabe1;
+    padding: 20px;
+    text-align: center;
+    height: 219px;
+    overflow: hidden;
+}
+
+
+    .price-header-mxc h3 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 34px;
+        margin-bottom: 12px;
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+    .price-header-mxc .fa {
+        font-size: 50px;
+        color: #0aabe1;
+        line-height: 1.8;
+        width: 155px;
+        height: 160px;
+        border-radius: 50%;
+        color: #fff;
+    }
+.price-header-promo {
+    background: #56C201;
+    padding: 20px;
+    text-align: center;
+    height: 180px;
+    overflow: hidden;
+}
+
+
+    .price-header-promo h3 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 34px;
+        margin-bottom: 12px;
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+    .price-header-promo .fa {
+        font-size: 50px;
+        line-height: 1.8;
+        width: 155px;
+        height: 160px;
+        border-radius: 50%;
+        color: #fff;
+    }
+
+
+
+
+
+
+
+
+.price-block:hover .price-header,
+.price-block.active .price-header {
+    /*background: #048bb9;*/
+}
+
+.price-header h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 12px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.price-header .fa {
+    font-size: 50px;
+    color: #0aabe1;
+    line-height: 1.8;
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.price-plan {
+    text-align: center;
+    font-size: 20px;
+    background: #fff;
+}
+
+    .price-plan ul li {
+        padding: 13px;
+    }
+
+        .price-plan ul li:nth-child(2n) {
+            background: #f7f7f7;
+        }
+/*oferta buena*/
+.price-plan-good {
+    text-align: center;
+    font-size: 20px;
+    background: #fff;
+}
+
+    .price-plan-good ul li {
+        padding: 10px;
+    }
+
+        .price-plan-good ul li:nth-child(2n) {
+            background: #f7f7f7;
+        }
+
+    .price-plan-good span {
+        font-family: 'Dosis', sans-serif;
+        font-size: 20px;
+        color: rgb(86, 194, 1);
+        font-weight: bold;
+    }
+
+    .price-plan-good label {
+        font-size: 20px;
+        font-family: 'Dosis', sans-serif;
+        color: #808080;
+        font-weight: bold;
+    }
+
+/*oferta mala*/
+.price-plan-bad {
+    text-align: center;
+    font-size: 20px;
+    background: #fff;
+}
+
+    .price-plan-bad ul li {
+        padding: 10px;
+    }
+
+        .price-plan-bad ul li:nth-child(2n) {
+            background: #f7f7f7;
+        }
+
+    .price-plan-bad span {
+        font-family: 'Dosis', sans-serif;
+        font-size: 20px;
+        color: red;
+        font-weight: bold;
+    }
+
+    .price-plan-bad label {
+        font-size: 20px;
+        font-family: 'Dosis', sans-serif;
+        color: #b41e1e;
+        font-weight: bold;
+    }
+
+.price {
+    font-family: 'Dosis', sans-serif;
+    color: #0aabe1;
+    font-size: 20px;
+}
+
+.month {
+    font-family: 'Dosis', sans-serif;
+    color: #b5b5b5;
+}
+
+.oferta {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.imgOferta {
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    display: inline;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.result-header {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 180px;
+    overflow: hidden;
+}
+
+.table-item {
+    background: #fff;
+    padding: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+    .table-item label {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 34px;
+        margin-bottom: 12px;
+        color: #0aabe1;
+        text-transform: capitalize;
+    }
+
+.table-Valor {
+    background: #fff;
+    padding: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+    .table-Valor label {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        color: #0aabe1;
+        text-transform: capitalize;
+    }
+
+.table-imgOferta {
+    width: 30%;
+    height: 30%;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    padding: 2px;
+    display: inline;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* CSS REQUIRED */
+.state-icon {
+    left: -5px;
+}
+
+.list-group-item-primary {
+    background-color: rgba(0, 0, 0, 0.19);
+}
+
+/* DEMO ONLY - REMOVES UNWANTED MARGIN */
+.well .list-group {
+    margin-bottom: 0px;
+}
+
+section#features .media.active i.fa {
+    color: #ffffff;
+    background: #66cdcc;
+}
+
+.data-header {
+    background: #0aabe1;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+    .data-header h3 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 34px;
+        margin-bottom: 12px;
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+.notification {
+    font-family: 'Dosis', sans-serif;
+    color: #0aabe1;
+    font-size: 12px;
+}
+
+.notificationHeader {
+    font-family: 'Dosis', sans-serif;
+    color: #0aabe1;
+    font-size: 15px;
+}
+
+.btn-mxc {
+    color: #fff;
+    background-color: #56C201;
+    border-color: #16d500;
+    font-weight: bolder;
+    font-size: 24px;
+    -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.3);
+    white-space: normal;
+}
+
+    .btn-mxc.active, .btn-mxc.focus, .btn-mxc:active, .btn-mxc:focus, .btn-mxc:hover, .open > .dropdown-toggle.btn-mxc {
+        color: #fff;
+        background-color: #42AF01;
+        border-color: #16d500;
+        font-weight: bold;
+    }
+
+    .btn-mxc.active, .btn-mxc:active, .open > .dropdown-toggle.btn-mxc {
+        background-image: none;
+    }
+
+    .btn-mxc.disabled, .btn-mxc.disabled.active, .btn-mxc.disabled.focus, .btn-mxc.disabled:active, .btn-mxc.disabled:focus, .btn-mxc.disabled:hover, .btn-mxc[disabled], .btn-mxc[disabled].active, .btn-mxc[disabled].focus, .btn-mxc[disabled]:active, .btn-mxc[disabled]:focus, .btn-mxc[disabled]:hover, fieldset[disabled] .btn-mxc, fieldset[disabled] .btn-mxc.active, fieldset[disabled] .btn-mxc.focus, fieldset[disabled] .btn-mxc:active, fieldset[disabled] .btn-mxc:focus, fieldset[disabled] .btn-mxc:hover {
+        background-color: #5bc0de;
+        border-color: #46b8da;
+    }
+
+    .btn-mxc .badge {
+        color: #5bc0de;
+        background-color: #fff;
+    }

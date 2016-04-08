@@ -1,0 +1,27 @@
+﻿
+/*Bootsnipp About Tools Snippets Register Login "Fancy Bootstrap Checkboxes" Bootstrap 3.3.0 Snippet by mouse0270 3.3.0 checkbox forms checkbox 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21*/
+.form-group input[type="checkbox"] {
+    display: none;
+}
+
+    .form-group input[type="checkbox"] + .btn-group > label span {
+        width: 20px;
+    }
+
+        .form-group input[type="checkbox"] + .btn-group > label span:first-child {
+            display: none;
+        }
+
+        .form-group input[type="checkbox"] + .btn-group > label span:last-child {
+            display: inline-block;
+        }
+
+    .form-group input[type="checkbox"]:checked + .btn-group > label span:first-child {
+        display: inline-block;
+    }
+
+    .form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
+        display: none;
+    }
+
+/*Similar snippets: See More 1.3K 0 Fancy Bootstrap Checkboxes Alternative 913 0 Custom Checkboxes 862 0 Badge style checkboxes (no js) 205 2 Bootstrap Checkboxes/Radios Long Tail Keyword Tool Generate a suggested list of keywords for your SEO and Ad campaigns for free! Comments: Follow @bootsnipp Tweet Bootsnipp.com © 2015 Dan's Tools | Site Privacy policy | Featured snippets are MIT license.*/
