@@ -3,7 +3,7 @@
 <!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
 <!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" ng-app="maxicreditoApp">
 <!--<![endif]-->
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,9 @@
     <link href="assets/js/slider/css/slider.css" rel="stylesheet" />
     <link href="assets/js/slider/css/bootstrap-slider.min.css" rel="stylesheet" />
     <script type="text/javascript" src="assets/js/modernizr.custom.32033.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/controllers.js"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -71,7 +74,9 @@
     </style>
 </head>
 <body>
-
+    <div ng-controller="MainController">
+        {{prueba}}
+    </div>
     <div class="pre-loader">
         <div class="load-con">
             <img src="assets/img/freeze/logo.png" class="animated fadeInDown" alt="">
