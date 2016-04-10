@@ -23,8 +23,10 @@
     <link href="assets/js/slider/css/bootstrap-slider.min.css" rel="stylesheet" />
     <script type="text/javascript" src="assets/js/modernizr.custom.32033.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.3/angular-resource.min.js"></script>
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/controllers.js"></script>
+    <script type="text/javascript" src="app/services.js"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -73,10 +75,7 @@
         }
     </style>
 </head>
-<body>
-    <div ng-controller="MainController">
-        {{prueba}}
-    </div>
+<body ng-controller="MainController">
     <div class="pre-loader">
         <div class="load-con">
             <img src="assets/img/freeze/logo.png" class="animated fadeInDown" alt="">
@@ -298,7 +297,7 @@
                                 <div class="form-group">
                                     <input id="ex6" type="text" style="width:100%;" data-slider-min="1" data-slider-max="120" data-slider-step="1" data-slider-value="12"
                                            data-slider-ticks="[1, 12, 24, 36, 48, 60, 72, 84]"
-                                           data-slider-ticks-labels='["1","12", "24", "36", "48", "60", "72", "84"]' />
+                                           data-slider-ticks-labels='["1","12", "24", "36", "48", "60", "72", "84"]' ng-model="term" />
                                 </div>
 
                                 <div class="row">
@@ -310,7 +309,7 @@
                                                     <h3><b>Monto en pesos</b></h3>
                                                     <div class="input-group">
                                                         <div class="input-group-addon">$</div>
-                                                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="1.000.000" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;">
+                                                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="1.000.000" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;" ng-model="amount">
                                                     </div>
                                                 </div>
                                             </div>
@@ -323,11 +322,11 @@
                                                 <div class="scrollpoint sp-effect5">
                                                     <h3><b>Es Empleado</b></h3>
                                                     <label>
-                                                        <input type="radio" name="iCheck" checked="checked">
+                                                        <input type="radio" name="iCheck" checked="checked" ng-model="isEmployee" value="1">
                                                         <b>SI&nbsp;&nbsp;&nbsp;&nbsp;</b>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="iCheck">
+                                                        <input type="radio" name="iCheck" ng-model="isEmployee" value="0">
                                                         <b>NO</b>
                                                     </label>
                                                 </div>
@@ -341,14 +340,14 @@
                                                     <h3><b>Sueldo en pesos</b></h3>
                                                     <div class="input-group">
                                                         <div class="input-group-addon">$</div>
-                                                        <input type="text" class="form-control" id="txtSalary" placeholder="0" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;">
+                                                        <input type="text" class="form-control" id="txtSalary" placeholder="0" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;" ng-model="salary">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#containerResult" class="btn btn-mxc col-xs-12"><b>BUSCAR MI CRÉDITO IDEAL</b></a>
+                                <a href class="btn btn-mxc col-xs-12" ng-click="compareCredits()"><b>BUSCAR MI CRÉDITO IDEAL</b></a>
 
                             </div>
                         </div>
@@ -359,7 +358,7 @@
 
         <section id="getApp">
 
-
+            
             <div class="container-fluid" id="containerResult">
                 <div class="section-heading inverse scrollpoint sp-effect3">
                     <h1>Crédito Libre Inversión</h1>
@@ -380,14 +379,15 @@
                                     <div class="col-md-12" id="tableResultMxc">
                                         <p style="color: #0aabe1; font-weight:bold;">Seleccione las ofertas que quieras Comparar</p>
 
-                                        <ul id="check-list-box" class="list-group checked-list-box">
+                                        <ul id="check-list-box" class="list-group checked-list-box" ng-repeat="product in validProducts | orderBy: 'monthlyPayment'">
                                             <li class="list-group-item">
                                                 <div class="panel panel-default">
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="table-item">
                                                                 <div class="scrollpoint sp-effect5">
-                                                                    <img src="Img/bbva.png" alt="" class="table-imgOferta" />
+                                                                    <!-- <img ng-src="Img/{{ product.code }}.jpg" alt="" class="table-imgOferta" /> -->
+                                                                    <img ng-src="Img/02.jpg" alt="" class="table-imgOferta" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -399,7 +399,7 @@
                                                             </div>
                                                             <div class="table-Valor">
                                                                 <label>
-                                                                    <b>1.41 %</b>
+                                                                    <b>{{ product.monthlyRate | number : 2 }}</b>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -412,7 +412,7 @@
                                                             </div>
                                                             <div class="table-Valor">
                                                                 <label>
-                                                                    <b>$911.725,59</b>
+                                                                    <b>{{ product.monthlyPayment | currency }}</b>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -425,74 +425,19 @@
                                                             </div>
                                                             <div class="table-Valor">
                                                                 <label>
-                                                                    <b>$10.940.707,07</b>
+                                                                    <b>{{ product.totalPayment | currency }}</b>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-2 scrollpoint sp-effect5 openDatails">
                                                             <div style="color: #0aabe1;">
-                                                                <h3 class="btn btn-primary"><b>Ver Detalle</b></h3>
+                                                                <h3 class="btn btn-primary"><b  ng-click="viewProductDetails(product.id)">Ver Detalle</b></h3>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="list-group-item">
-                                                <div class="panel panel-default">
-                                                    <div class="row">
-                                                        <div class="col-md-4 scrollpoint sp-effect5">
-                                                            <div class="table-item">
-                                                                <div class="scrollpoint sp-effect5">
-                                                                    <img src="Img/citibank.png" alt="" class="table-imgOferta" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2 scrollpoint sp-effect5">
-                                                            <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
-                                                                <label>
-                                                                    <b>Tasa Mensual</b>
-                                                                </label>
-                                                            </div>
-                                                            <div class="table-Valor">
-                                                                <label>
-                                                                    <b>1.94 %</b>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-2 scrollpoint sp-effect5" style="text-align:center; vertical-align:middle;">
-                                                            <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
-                                                                <label>
-                                                                    <b>Cuota Mensual</b>
-                                                                </label>
-                                                            </div>
-                                                            <div class="table-Valor">
-                                                                <label>
-                                                                    <b>$942.029,65</b>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-md-2 scrollpoint sp-effect5" style="text-align:center; vertical-align:middle;">
-                                                            <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
-                                                                <label>
-                                                                    <b>Total del Pago</b>
-                                                                </label>
-                                                            </div>
-                                                            <div class="table-Valor">
-                                                                <label>
-                                                                    <b>$11.304.355,76</b>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2 scrollpoint sp-effect5 openDatails">
-                                                            <div style="color: #0aabe1;">
-                                                                <h3 class="btn btn-primary"><b>Ver Detalle</b></h3>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            
                                         </ul>
                                         <br />
                                         Captura los datos de las filas seleccionadas en el click del botón de comparar
@@ -514,14 +459,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 contact-details scrollpoint sp-effect2 wow bounceInUp" data-wow-duration="1s">
+                            <div><select>
+                                <option ng-repeat="product in validProducts" value="{{ product.id }}">{{ product.bank }}</option>
+                            </select></div>
                             <div style="border :3px solid transparent;">
-                                <select class="selectpicker" data-style="btn-info" style="display: none;">
-                                    <option>BBVA</option>
-                                    <option>BANCOLOMBIA</option>
-                                    <option>AV VILLAS</option>
-                                    <option>COLPATRIA</option>
-                                    <option>CAJA SOCIAL</option>
-                                    <option>POPULAR</option>
+                                <select class="selectpicker" data-style="btn-info" style="display: block;">
+                                    <option ng-repeat="product in validProducts" value="{{ product.id }}">{{ product.bank }}</option>
                                 </select>
                             </div>
                             <div class="price-block">
@@ -878,6 +821,7 @@
             </div>
         </div>
     </div>
+    <input type="hidden" name="filterTerm" ng-model="term"/>
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
@@ -908,7 +852,12 @@
             });
 
             $("#ex6").on('slide', function (slideEvt) {
-                $("#lblTerm").text(slideEvt.value);
+                var el = $("#lblTerm");
+                el.text(slideEvt.value);
+                var scope = angular.element(el).scope();
+                scope.$apply(function(){
+                   scope.term = parseInt(slideEvt.value); 
+                });
             });
         });
     </script>
@@ -928,6 +877,15 @@
                 checkboxClass: 'icheckbox_square-blue',
                 radioClass: 'iradio_square-blue',
                 increaseArea: '20%' // optional
+            });
+            
+            $('input').on('ifChecked', function(event){
+                var t = event.target;
+                var val = $(t).val();
+                var scope = angular.element($('input[type=radio]')[0]).scope();
+                scope.$apply(function () {
+                    scope.isEmployee = val;
+                });
             });
         });
 
@@ -1049,11 +1007,12 @@
         });
 
         $(document).ready(function () {
-            var s = $("#sticker");
+            //var s = $("#sticker");
+            var s = $("#support");
             var pos = s.position();
             $(window).scroll(function () {
                 var windowpos = $(window).scrollTop();
-                s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+                //s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
                 if (windowpos >= pos.top) {
                     s.addClass("stick");
                 } else {
@@ -1086,5 +1045,6 @@
 
 
     </script>
+    <script type="text/javascript" src="scripts/events.js"></script>
 </body>
 </html>
