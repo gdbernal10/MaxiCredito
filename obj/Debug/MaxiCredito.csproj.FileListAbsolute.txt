@@ -1,6 +1,0 @@
-E:\Dropbox\Uniandes\Proyecto Integrador\Proyecto Web\MaxiCredito\MaxiCredito\bin\MaxiCredito.dll.config
-E:\Dropbox\Uniandes\Proyecto Integrador\Proyecto Web\MaxiCredito\MaxiCredito\bin\MaxiCredito.dll
-E:\Dropbox\Uniandes\Proyecto Integrador\Proyecto Web\MaxiCredito\MaxiCredito\bin\MaxiCredito.pdb
-E:\Dropbox\Uniandes\Proyecto Integrador\Proyecto Web\MaxiCredito\MaxiCredito\obj\Debug\MaxiCredito.csprojResolveAssemblyReference.cache
-E:\Dropbox\Uniandes\Proyecto Integrador\Proyecto Web\MaxiCredito\MaxiCredito\obj\Debug\MaxiCredito.dll
-E:\Dropbox\Uniandes\Proyecto Integrador\Proyecto Web\MaxiCredito\MaxiCredito\obj\Debug\MaxiCredito.pdb
