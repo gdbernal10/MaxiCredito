@@ -41,7 +41,12 @@
 			}
 			
 			document.location = '#getApp';
-			updateComparativeOptions($scope.validProducts);
+			//updateComparativeOptions($scope.validProducts);
+
+			setTimeout(function(){
+				setSelectorWidgets();
+			}, 500);
+			
 		};
 		
 		
@@ -66,30 +71,25 @@
             e.preventDefault();
 		}
 		
-		$scope.$watch('selectedProductOne', function(newVal, oldVal){
-		    if(!!newVal && !!$scope.selectedProductTwo){
+		$scope.$watch('product1', function(newVal, oldVal){			
+		    if(!!newVal && !!$scope.product2){
 		        $scope.compareSelectedProducts();
+		    }else if(!!$scope.product1){
+		    	$scope.product1.statusClass = 'price-plan';
 		    }
 		});
 		
-		$scope.$watch('selectedProductTwo', function(newVal, oldVal){
-		    if(!!newVal && !!$scope.selectedProductOne){
+		$scope.$watch('product2', function(newVal, oldVal){
+		    if(!!newVal && !!$scope.product1){
 		        $scope.compareSelectedProducts();
+		    }else if(!!$scope.product2){
+		    	$scope.product2.statusClass = 'price-plan';
 		    }
 		});
 		
 		$scope.compareSelectedProducts = function(){
-		    var product1 = _.find($scope.validProducts, function(item){
-		        return item.id === parseInt($scope.selectedProductOne);
-		    });
-		    var product2 = _.find($scope.validProducts, function(item){
-		        return item.id === parseInt($scope.selectedProductTwo);
-		    });
 		    
-		    $scope.product1 = product1;
-		    $scope.product2 = product2;
-		    
-		    if(product1.monthlyRate < product2.monthlyRate){
+		    if($scope.product1.monthlyRate < $scope.product2.monthlyRate){
 		        $scope.product1.statusClass = 'price-plan-good';
 		        $scope.product2.statusClass = 'price-plan-bad';
 		        
