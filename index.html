@@ -25,6 +25,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.5.3/angular-resource.min.js"></script>
     <script type="text/javascript" src="scripts/underscore-min.js"></script>
+    <script type="text/javascript" src="scripts/logic.js"></script>
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/controllers.js"></script>
     <script type="text/javascript" src="app/services.js"></script>
@@ -296,9 +297,9 @@
                                 <h3>Plazo del Crédito en Meses: &nbsp;&nbsp;<b><span id="lblTerm">12</span></b></h3>
 
                                 <div class="form-group">
-                                    <input id="ex6" type="text" style="width:100%;" data-slider-min="1" data-slider-max="120" data-slider-step="12" data-slider-value="12"
-                                           data-slider-ticks="[1, 12, 24, 36, 48, 60, 72, 84]"
-                                           data-slider-ticks-labels='["1","12", "24", "36", "48", "60", "72", "84"]' ng-model="term" />
+                                    <input id="ex6" type="text" style="width:100%;" data-slider-min="0" data-slider-max="84" data-slider-step="12" data-slider-value="12"
+                                           data-slider-ticks="[0, 12, 24, 36, 48, 60, 72, 84]"
+                                           data-slider-ticks-labels='["0","12", "24", "36", "48", "60", "72", "84"]' ng-model="need.term" />
                                 </div>
 
                                 <div class="row">
@@ -310,7 +311,7 @@
                                                     <h3><b>Monto en pesos</b></h3>
                                                     <div class="input-group">
                                                         <div class="input-group-addon">$</div>
-                                                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="1.000.000" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;" ng-model="amount">
+                                                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="1.000.000" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;" ng-model="need.amount">
                                                     </div>
                                                 </div>
                                             </div>
@@ -323,11 +324,11 @@
                                                 <div class="scrollpoint sp-effect5">
                                                     <h3><b>Es Empleado</b></h3>
                                                     <label>
-                                                        <input type="radio" name="iCheck" checked="checked" ng-model="isEmployee" value="1">
+                                                        <input type="radio" name="iCheck" checked="checked" ng-model="need.isEmployee" value="1">
                                                         <b>SI&nbsp;&nbsp;&nbsp;&nbsp;</b>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="iCheck" ng-model="isEmployee" value="0">
+                                                        <input type="radio" name="iCheck" ng-model="need.isEmployee" value="0">
                                                         <b>NO</b>
                                                     </label>
                                                 </div>
@@ -341,7 +342,7 @@
                                                     <h3><b>Sueldo en pesos</b></h3>
                                                     <div class="input-group">
                                                         <div class="input-group-addon">$</div>
-                                                        <input type="text" class="form-control" id="txtSalary" placeholder="0" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;" ng-model="salary">
+                                                        <input type="text" class="form-control" id="txtSalary" placeholder="0" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;" ng-model="need.salary">
                                                     </div>
                                                 </div>
                                             </div>
@@ -635,7 +636,7 @@
             </div>
         </section>
 
-        <div id="modal" class="modal-demo">
+        <div id="modal" class="modal-demo" ng-controller="ScannerController">
             <button type="button" class="close" onclick="Custombox.close();">
                 <span>&times;</span><span class="sr-only">Close</span>
             </button>
@@ -849,7 +850,7 @@
                 el.text(slideEvt.value);
                 var scope = angular.element(el).scope();
                 scope.$apply(function(){
-                   scope.term = parseInt(slideEvt.value); 
+                   scope.need.term = parseInt(slideEvt.value); 
                 });
             });
         });
@@ -877,7 +878,7 @@
                 var val = $(t).val();
                 var scope = angular.element($('input[type=radio]')[0]).scope();
                 scope.$apply(function () {
-                    scope.isEmployee = val;
+                    scope.need.isEmployee = val;
                 });
             });
         });
