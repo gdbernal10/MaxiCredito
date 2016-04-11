@@ -30,7 +30,7 @@
 					var validRate = filterTerm(product.rates, $scope.need.term);
 					if(!!validRate && validateSalary(product, $scope.need.salary)){
 						product.selectedRate = validRate;
-						product.monthlyPayment = getMonthlyPayment($scope.amount, $scope.need.term, validRate);
+						product.monthlyPayment = getMonthlyPayment($scope.need.amount, $scope.need.term, validRate);
 						product.totalPayment = getTotalPayment(product.monthlyPayment, $scope.need.term);
 						product.monthlyRate = getMonthlyRate(validRate.value);
 						product.totalRatePayment = product.totalPayment - parseFloat($scope.need.amount);

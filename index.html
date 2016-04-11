@@ -666,7 +666,7 @@
                                                             <div class="col-md-12">
                                                                 <div class="input-group">
                                                                     <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
-                                                                    <input type="text" class="form-control" id="txtName" placeholder="Nombre y Apellidos">
+                                                                    <input type="text" class="form-control" id="txtName" placeholder="Nombre y Apellidos" ng-model="subscription.name">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -675,7 +675,7 @@
                                                             <div class="col-md-12">
                                                                 <div class="input-group">
                                                                     <div class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></div>
-                                                                    <input type="text" class="form-control" id="txtEmail" placeholder="Correo electrónico">
+                                                                    <input type="text" class="form-control" id="txtEmail" placeholder="Correo electrónico" ng-model="subscription.email">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -684,19 +684,19 @@
                                                             <div class="col-md-12">
                                                                 <div class="input-group">
                                                                     <div class="input-group-addon"><i class="fa fa-phone fa-fw"></i></div>
-                                                                    <input type="text" class="form-control" id="txtPhone" placeholder="Número Teléfono Móvil">
+                                                                    <input type="text" class="form-control" id="txtPhone" placeholder="Número Teléfono Móvil" ng-model="subscription.mobile">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-inline">
                                                         <div class="form-group col-md-4 col-sm-4" style="text-align:left;">
-                                                            <input type="checkbox" name="cbEmail" id="cbEmail" checked="checked" />
+                                                            <input type="checkbox" name="cbEmail" id="cbEmail" checked="checked" ng-model="subscription.emailWay" />
                                                             <label for="cbEmail" class="notification">
                                                                 Email
                                                             </label>
                                                         </div>
-                                                        <div class="form-group col-md-4 col-sm-4" style="text-align:left;">
+                                                        <!-- <div class="form-group col-md-4 col-sm-4" style="text-align:left;">
                                                             <input type="checkbox" name="cbSMS" id="cbSMS" checked="checked" />
                                                             <label for="cbSMS" class="notification">
                                                                 Notificación a Tu SmartPhone
@@ -707,7 +707,7 @@
                                                             <label for="cbSmart" class="notification">
                                                                 Mensaje de Texto
                                                             </label>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                     <button type="button" class="btn btn-mxc col-md-12"><b>Activar Scanner de Ofertas</b></button>
                                                 </div>

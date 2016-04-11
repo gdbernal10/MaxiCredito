@@ -1,3 +1,4 @@
+/*global angular*/ 
  //Validate if a term apply in a product
 var filterTerm = function(rates, term){
 	var validRate = undefined;
