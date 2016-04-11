@@ -88,7 +88,7 @@
 		});
 		
 		$scope.compareSelectedProducts = function(){
-		    
+		    if(!$scope.product1 || !$scope.product2) return;
 		    if($scope.product1.monthlyRate < $scope.product2.monthlyRate){
 		        $scope.product1.statusClass = 'price-plan-good';
 		        $scope.product2.statusClass = 'price-plan-bad';
@@ -108,14 +108,39 @@
 		    //bad.png
 		    //check.png
 		}
+		
+		$scope.setProduct = function(productId){
+			if(!!$scope.product1){
+				if(!!$scope.product2){
+					return;
+				}else{
+					$scope.product2 = _.find($scope.validProducts, function(prod){
+						return prod.id === parseInt(productId);	
+					});
+				}
+			}else{
+				$scope.product1 = _.find($scope.validProducts, function(prod){
+					return prod.id === parseInt(productId);	
+				});
+			}
+			$scope.compareSelectedProducts();
+		}
+		
+		$scope.releaseProduct = function(productId){
+			if(!!$scope.product1 && $scope.product1.id === parseInt(productId)){
+				$scope.product1 = undefined;
+			}else if(!!$scope.product2 && $scope.product2.id === parseInt(productId)){
+				$scope.product2 = undefined;
+			}
+		}
     }]);
     
-    var updateComparativeOptions = function(options){
-        angular.forEach(options, function(item){
-           $('.selectpicker').append($('<option value="' + item.id + '">' + item.bank + '</option>')); 
-        });
-        $('.selectpicker').selectpicker('refresh');
-    };
+    // var updateComparativeOptions = function(options){
+    //     angular.forEach(options, function(item){
+    //       $('.selectpicker').append($('<option value="' + item.id + '">' + item.bank + '</option>')); 
+    //     });
+    //     $('.selectpicker').selectpicker('refresh');
+    // };
     
     //Validate if a term apply in a product
 	var filterTerm = function(rates, term){

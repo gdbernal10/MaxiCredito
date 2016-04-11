@@ -296,7 +296,7 @@
                                 <h3>Plazo del Crédito en Meses: &nbsp;&nbsp;<b><span id="lblTerm">12</span></b></h3>
 
                                 <div class="form-group">
-                                    <input id="ex6" type="text" style="width:100%;" data-slider-min="1" data-slider-max="120" data-slider-step="1" data-slider-value="12"
+                                    <input id="ex6" type="text" style="width:100%;" data-slider-min="1" data-slider-max="120" data-slider-step="12" data-slider-value="12"
                                            data-slider-ticks="[1, 12, 24, 36, 48, 60, 72, 84]"
                                            data-slider-ticks-labels='["1","12", "24", "36", "48", "60", "72", "84"]' ng-model="term" />
                                 </div>
@@ -904,12 +904,29 @@
 
                 // Event Handlers
                 $widget.on('click', function () {
-                    $checkbox.prop('checked', !$checkbox.is(':checked'));
+                    var scope = angular.element($checkbox).scope();
+                    var selected = !$checkbox.is(':checked');
+                    if(!!scope.product1 && !!scope.product2 && selected){
+                        $checkbox.prop('checked', false);
+                        return;   
+                    }
+                    
+                    
+                    $checkbox.prop('checked', selected);
                     $checkbox.triggerHandler('change');
 
-                    //Evniar informacio al controlador de angular
-                    var scope = angular.element($checkbox).scope();
-                    scope.setProduct();
+                    
+                    var productId = $checkbox.parent().data('product');
+                    if(selected){
+                        //Enviar informacio al controlador de angular
+                        scope.$apply(function(){
+                            scope.setProduct(productId);    
+                        });
+                    }else{
+                        scope.$apply(function(){
+                            scope.releaseProduct(productId);
+                        })
+                    }
 
                     updateDisplay();
                 });
