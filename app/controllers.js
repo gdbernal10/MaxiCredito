@@ -1,5 +1,7 @@
 (function(){
     /*global angular*/
+    /*global $*/
+    /*global _*/
     'use strict';
     
     var controllers = angular.module('maxicreditoControllers', ['maxicreditoServices']);
@@ -39,13 +41,81 @@
 			}
 			
 			document.location = '#getApp';
+			updateComparativeOptions($scope.validProducts);
 		};
 		
 		
-		$scope.viewProductDetails = function(productId){
-		    alert(productId);
+		$scope.viewProductDetails = function(productId, e){
+		    $scope.selectedProduct = _.find($scope.validProducts, function(product){
+		        return product.id === productId;
+		    });
+		    
+		    //Abrir ventana de detalles
+		    //obtener el scroll actual para volverlo a posicionar al cerrar la ventana
+		    var currentScroll = $(window).scrollTop();
+		    Custombox.open({
+                target: '#modalDetalle',
+                effect: 'swell',
+                overlayClose: true,
+                overlayColor: '#fff',
+                close: function(){
+                    //posicionar la ventana donde se encontraba al abrir los detalles
+                    window.moveTo(currentScroll, $(window).scrollLeft());
+                }
+            });
+            e.preventDefault();
+		}
+		
+		$scope.$watch('selectedProductOne', function(newVal, oldVal){
+		    if(!!newVal && !!$scope.selectedProductTwo){
+		        $scope.compareSelectedProducts();
+		    }
+		});
+		
+		$scope.$watch('selectedProductTwo', function(newVal, oldVal){
+		    if(!!newVal && !!$scope.selectedProductOne){
+		        $scope.compareSelectedProducts();
+		    }
+		});
+		
+		$scope.compareSelectedProducts = function(){
+		    var product1 = _.find($scope.validProducts, function(item){
+		        return item.id === parseInt($scope.selectedProductOne);
+		    });
+		    var product2 = _.find($scope.validProducts, function(item){
+		        return item.id === parseInt($scope.selectedProductTwo);
+		    });
+		    
+		    $scope.product1 = product1;
+		    $scope.product2 = product2;
+		    
+		    if(product1.monthlyRate < product2.monthlyRate){
+		        $scope.product1.statusClass = 'price-plan-good';
+		        $scope.product2.statusClass = 'price-plan-bad';
+		        
+		        $scope.product1.img = 'check';
+		        $scope.product2.img = 'bad';
+		    }else{
+		        $scope.product1.statusClass = 'price-plan-bad';
+		        $scope.product2.statusClass = 'price-plan-good';
+		        
+		        $scope.product1.img = 'bad';
+		        $scope.product2.img = 'check';
+		    }
+		    
+		    //price-plan-bad
+		    //price-plan-good
+		    //bad.png
+		    //check.png
 		}
     }]);
+    
+    var updateComparativeOptions = function(options){
+        angular.forEach(options, function(item){
+           $('.selectpicker').append($('<option value="' + item.id + '">' + item.bank + '</option>')); 
+        });
+        $('.selectpicker').selectpicker('refresh');
+    };
     
     //Validate if a term apply in a product
 	var filterTerm = function(rates, term){
