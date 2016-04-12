@@ -300,6 +300,7 @@
                                     <input id="ex6" type="text" style="width:100%;" data-slider-min="0" data-slider-max="84" data-slider-step="12" data-slider-value="12"
                                            data-slider-ticks="[0, 12, 24, 36, 48, 60, 72, 84]"
                                            data-slider-ticks-labels='["0","12", "24", "36", "48", "60", "72", "84"]' ng-model="need.term" />
+                                           <div ng-show="errors.term.status" class="text-danger">{{ errors.term.message }}</div>
                                 </div>
 
                                 <div class="row">
@@ -314,6 +315,7 @@
                                                         <input type="text" class="form-control" id="exampleInputAmount" placeholder="1.000.000" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;" ng-model="need.amount">
                                                     </div>
                                                 </div>
+                                                <div ng-show="errors.amount.status" class="text-danger">{{ errors.amount.message }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -345,6 +347,7 @@
                                                         <input type="text" class="form-control" id="txtSalary" placeholder="0" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;" ng-model="need.salary">
                                                     </div>
                                                 </div>
+                                                <div ng-show="errors.salary.status" class="text-danger">{{ errors.salary.message }}</div>
                                             </div>
                                         </div>
                                     </div>

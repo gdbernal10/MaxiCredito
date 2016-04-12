@@ -11,16 +11,42 @@
         $scope.need = need;
         $scope.products = Products.get();
         
+        $scope.errors = {};
+		$scope.errors.amount = {};
+		$scope.errors.term = {};
+		$scope.errors.salary = {};
+        
         //filter initialization
         (function(){
             $scope.need.term = 12;
             $scope.need.isEmployee = true;
+            $scope.need.amount = 1000000;
         }());
         
+        $scope.validate = function(){
+
+			if(!$scope.need.amount){
+				$scope.errors.amount.status = true;
+				$scope.errors.amount.message = 'Debe diligenciar el valor del monto';
+				$scope.errorsCount++;
+			}
+
+			if(!$scope.need.term){
+				$scope.errors.term.status = true;
+				$scope.errors.term.message = 'Debe diligenciar el plazo';
+				$scope.errorsCount++;
+			}
+			
+			if(!$scope.need.salary){
+				$scope.errors.salary.status = true;
+				$scope.errors.salary.message = 'Debe diligenciar el salario';
+				$scope.errorsCount++;
+			}
+		}
         
         $scope.compareCredits = function(){
 			$scope.errorsCount = 0;
-			//$scope.validate();
+			$scope.validate();
 
 			if($scope.errorsCount === 0){
 				var products = $scope.products.list;
@@ -38,15 +64,13 @@
 						$scope.validProducts.push(product);
 					}
 				});
+				document.location = '#getApp';
+				//updateComparativeOptions($scope.validProducts);
+	
+				setTimeout(function(){
+					setSelectorWidgets();
+				}, 500);
 			}
-			
-			document.location = '#getApp';
-			//updateComparativeOptions($scope.validProducts);
-
-			setTimeout(function(){
-				setSelectorWidgets();
-			}, 500);
-			
 		};
 		
 		
