@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
 <!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
 <!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
@@ -387,9 +387,9 @@
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="table-item">
-                                                                <div class="scrollpoint sp-effect5">
-                                                                    <!-- <img ng-src="Img/{{ product.code }}.jpg" alt="" class="table-imgOferta" /> -->
-                                                                    <img ng-src="Img/02.jpg" alt="" class="table-imgOferta" />
+                                                                <!-- <div class="scrollpoint sp-effect5"> -->
+                                                                <div>
+                                                                    <img ng-src="Img/{{ product.code }}.png" alt="" class="table-imgOferta" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -406,7 +406,8 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-md-2 scrollpoint sp-effect5" style="text-align:center; vertical-align:middle;">
+                                                        <!-- <div class="col-md-2 scrollpoint sp-effect5" style="text-align:center; vertical-align:middle;"> -->
+                                                        <div class="col-md-2">
                                                             <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
                                                                 <label>
                                                                     <b>Cuota Mensual</b>
@@ -419,7 +420,8 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-md-2 scrollpoint sp-effect5" style="text-align:center; vertical-align:middle;">
+                                                        <!-- <div class="col-md-2 scrollpoint sp-effect5" style="text-align:center; vertical-align:middle;"> -->
+                                                        <div class="col-md-2">
                                                             <div style="font-size: 20px;font-family: 'Dosis', sans-serif;color: #808080;font-weight: bold;">
                                                                 <label>
                                                                     <b>Total del Pago</b>
@@ -431,7 +433,8 @@
                                                                 </label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-2 scrollpoint sp-effect5 openDatails">
+                                                        <!-- <div class="col-md-2 scrollpoint sp-effect5 openDatails"> -->
+                                                        <div class="col-md-2 openDatails">
                                                             <div style="color: #0aabe1;">
                                                                 <h3 class="btn btn-primary"><b  ng-click="viewProductDetails(product.id, $event)">Ver Detalle</b></h3>
                                                             </div>
@@ -469,9 +472,9 @@
                             <div class="price-block" ng-show="!!product1">
                                 <div class="panel panel-default oferta">
                                     <div class="price-header" style="z-index:999999!important;">
-                                        <h3>{{ product1.bank | uppercase }}</h3>
+                                        <h4 style="color: white">{{ product1.bank | uppercase }}</h4>
                                         <div class="filtering scrollpoint sp-effect5" style=" height:120%;">
-                                            <img ng-srg="Img/{{ product1.code }}.jpg" alt="" class="imgOferta" />
+                                            <img ng-src="Img/{{ product1.code }}.png" alt="" class="imgOferta" />
                                         </div>
                                     </div>
                                     <div class="{{ product1.statusClass }}">
@@ -567,9 +570,9 @@
                             <div class="price-block" ng-show="!!product2">
                                 <div class="panel panel-default oferta">
                                     <div class="price-header">
-                                        <h3>{{ product2.bank | uppercase }}</h3>
+                                        <h4 style="color: white">{{ product2.bank | uppercase }}</h4>
                                         <div class="scrollpoint sp-effect5" style=" height:120%;">
-                                            <img ng-src="Img/{{ product2.code }}.jpg" alt="" class="imgOferta" />
+                                            <img ng-src="Img/{{ product2.code }}.png" alt="" class="imgOferta" />
                                         </div>
                                     </div>
                                     <div class="{{ product2.statusClass }}">
@@ -709,7 +712,7 @@
                                                             </label>
                                                         </div> -->
                                                     </div>
-                                                    <button type="button" class="btn btn-mxc col-md-12"><b>Activar Scanner de Ofertas</b></button>
+                                                    <button type="button" class="btn btn-mxc col-md-12" ng-click="sendSubscription()"><b>Activar Scanner de Ofertas</b></button>
                                                 </div>
                                             </div>
                                             <div class="form-inline">
@@ -1069,11 +1072,17 @@
     <script>
         $(function () {
             $('#btnPromo').on('click', function (e) {
+                
+                var currentTop = $(window).scrollTop();
+                
                 Custombox.open({
                     target: '#modal',
                     effect: 'newspaper',
                     overlayClose: false,
-                    overlayColor: '#fff'
+                    overlayColor: '#fff',
+                    close: function(){
+                        window.moveTo(currentTop, $(window).scrollLeft());
+                    }
                 });
                 e.preventDefault();
             });

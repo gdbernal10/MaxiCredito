@@ -135,8 +135,25 @@
 		}
     }]);
     
-    controllers.controller('ScannerController', ['$scope', 'need', function($scope, need){
+    controllers.controller('ScannerController', ['$scope', 'need', 'scanners', function($scope, need, scanners){
     	$scope.need = need;
+    	$scope.subscription = {};
+    	
+    	$scope.sendSubscription = function(){
+    		var subs = {
+    			salary: $scope.need.salary,
+    			term: $scope.need.term,
+    			amount: $scope.need.amount,
+    			employee: $scope.need.isEmployee,
+    			active: 1,
+    			tn_name: $scope.subscription.name,
+    			email: $scope.subscription.email,
+    			tn_email: 1
+    		}
+    		scanners.save(subs, function(){
+    			Custombox.close();
+    		});
+    	}
     }]);
    
 }());

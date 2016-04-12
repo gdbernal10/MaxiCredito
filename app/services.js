@@ -3,9 +3,13 @@
     
     var services = angular.module('maxicreditoServices', []);
     
-    services.factory('Products', ['$resource', function($resource){
-		return $resource('http://ec2-52-23-194-180.compute-1.amazonaws.com/rates');
+    services.factory('Products', ['$resource', 'myConfig', function($resource, myConfig){
+		return $resource(myConfig.endPoint + '/rates');
 		//return $resource('data/credits.js');
+	}]);
+	
+	services.factory('scanners', ['$resource', 'myConfig', function($resource, myConfig){
+		return $resource(myConfig.endPoint + '/scanners');
 	}]);
 	
 	services.factory('need', [function(){
