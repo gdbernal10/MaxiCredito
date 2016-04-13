@@ -1,0 +1,250 @@
+﻿<!doctype html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>MAXICREDITO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Bootstrap 3.3.2 -->
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/js/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="text/javascript" src="assets/js/modernizr.custom.32033.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="assets/css/content/style.css" rel="stylesheet" />
+
+    <style>
+        option {
+            height: 35px;
+            padding: 10px;
+            line-height: 35px;
+            background-color: white;
+            color: gray;
+            font-weight: bold;
+        }
+
+        select {
+            height: 35px;
+        }
+
+
+        .modal-demo {
+            background-color: transparent;
+            width: 800px;
+            height: 800px;
+            border: transparent none 0;
+            /*border-radius: 10px;*/
+            /*box-shadow: 0 8px 6px -6px black;*/
+            text-align: center;
+            display: none;
+        }
+
+        .title {
+            padding: 10px 20px 15px 20px;
+            line-height: 18px;
+            font-size: 18px;
+            border-bottom: #CCC solid 1px;
+        }
+
+        .text {
+            padding: 0 20px 20px 20px;
+        }
+
+
+
+        #slideIzq, #fadeIzq {
+            position: absolute;
+            background: white;
+            z-index: 99999 !important;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            cursor: pointer;
+        }
+
+        #slideIzq, #fadeIzq {
+            left: -5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pre-loader">
+        <div class="load-con">
+            <img src="assets/img/freeze/logo.png" class="animated fadeInDown" alt="">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="fa fa-bars fa-lg"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/freeze/logo.png" alt="" class="logo">
+                        <br />
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="getApp" href="index.html">Buscar Mi Crédito</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-->
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="text">
+            <div class="price-block">
+                <div class="panel panel-default oferta">
+                    <div class="price-header">
+                        <div class="filtering scrollpoint sp-effect5 col-sm-6">
+                            <p style="color:white; font-weight:bold; font-size:14pt;"></p>
+                        </div>
+                        <div class="filtering scrollpoint sp-effect5 col-sm-6">
+                            <img src="assets/img/oferta.png" />
+                        </div>
+                    </div>
+                    <h1 style=" color: #0aabe1;">Términos, Condiciones y Políticas de Uso</h1>
+                    <br />
+                    <div class="price-plan">
+                        <div style="padding: 5px;">
+                            <div class="panel panel-info oferta">
+                                <div class="panel-heading">Información General</div>
+                                <div class="panel-body" style="text-align: left;">
+                                    <p>
+                                        Esta aplicación declara los “Términos y Condiciones” bajo las cuales usted puede usar <span style="  color: #0aabe1;">www.maxicredito.com</span>, por favor lea cuidadosamente esta página.
+                                    </p>
+                                    <p>
+                                        Si usted no acepta los “Términos y Condiciones” en esta página o si es menor de edad,   por favor no utilice los servicios ofrecidos por  <span style="  color: #0aabe1;">www.maxicredito.com</span>.
+                                    </p>
+                                    <p>
+                                        A través del uso de esta aplicación usted está aprobando los  “Términos y Condiciones” expuesto aquí. Usted debe visitar periódicamente  esta página y examinarla, ya que <span style="  color: #0aabe1;">www.maxicredito.com</span> puede modificar o actualizar el contenido de los términos y condiciones, basado en lo anterior usted se debe comprometer a realizar esta operación, ya que para el uso de <span style="  color: #0aabe1;">www.maxicredito.com</span> usted debe cumplir a cabalidad con los términos y condiciones expuestas aquí.
+                                    </p>
+                                    <p>
+                                        Nos referimos a “Usted”, “Cliente” o “Usuario” a todas las personas naturales o jurídicas o entidades de cualquier naturaleza que por cualquier razón accedan o utilicen los servicios de <span style="  color: #0aabe1;">www.maxicredito.com</span>.
+                                    </p>
+                                    <p>
+                                        Si usted hace uso de <span style="  color: #0aabe1;">www.maxicredito.com</span> fuera del territorio Colombiano lo hace bajo su riego y responsabilidad acorde a las leyes aplicables en dicho territorio.
+                                    </p>
+                                    <p>
+                                        Quien haga uso de los servicios de <span style="  color: #0aabe1;">www.maxicredito.com</span> acepta y otorga bajo su responsabilidad que su información sea almacenada en nuestras bases de datos. Si el usuario deseé que su información sea retirada de <span style="  color: #0aabe1;">www.maxicredito.com</span> deberán enviar un email a <span style="  color: #0aabe1;">contacto@maxicredito.com</span>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 5px;">
+                            <div class="panel panel-info oferta">
+                                <div class="panel-heading">Objetivo del Sitio Web</div>
+                                <div class="panel-body" style="text-align: left;">
+                                    <p>
+                                        <span style="  color: #0aabe1;">www.maxicredito.com</span> ofrece información actualizada y centralizada sobre productos asociados a servicios financieros ofrecidos en el territorio colombiano. Brindando a los usuarios la oportunidad de comparar diversas ofertas de productos financieros y acceder al servicio de notificaciones de ofertas. La información personal capturada y almacenada en este sitio web será utilizada en inteligencia de negocios,  en mejora de la experiencia del usuario y en fines comerciales. Dicha información podría ser  recolectada, procesada y comercializada por <span style="  color: #0aabe1;">www.maxicredito.com</span>, sus clientes y sus terceros.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 5px;">
+                            <div class="panel panel-info oferta">
+                                <div class="panel-heading">Uso de Servicios Gratuitos</div>
+                                <div class="panel-body" style="text-align: left;">
+                                    <p>
+                                        La empresa <span style="  color: #0aabe1;">www.maxicredito.com</span> autoriza a usted a consultar, revisar y utilizar de forma gratuita los servicios ofrecidos en este sitio web, bajo la restricción de su uso personal y no comercial.
+                                    </p>
+
+                                    <p>Servicios gratuitos incluidos:</p>
+                                    <p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Servicios de consulta y comparación de información sobre créditos.</p>
+                                    <p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Servicios de escáner de ofertas de créditos.</p>
+                                    <p>El contenido de <span style="  color: #0aabe1;">www.maxicredito.com</span>, incluyendo pero sin limitarse a, los textos, gráficas, imágenes, logotipos, iconos, software y cualquier otro material están protegidos bajo las leyes de derechos de autor, leyes de propiedad industrial y otras leyes aplicables.</p>
+                                    <p>Todo el contenido  utilizado en  <span style="  color: #0aabe1;">www.maxicredito.com</span> es de propiedad de la empresa  o de sus proveedores o clientes.</p>
+                                    <p>El uso no autorizado del material puede constituir una violación de las leyes colombianas o extranjeras sobre derechos de autor, leyes de propiedad industrial u otras leyes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 5px;">
+                            <div class="panel panel-info oferta">
+                                <div class="panel-heading">Protección y Tratamiento de Datos</div>
+                                <div class="panel-body" style="text-align: left;">
+                                    <p>
+                                        Quien registre información personal en alguno de los servicios de <span style="  color: #0aabe1;">www.maxicredito.com</span> autoriza de forma expresa a  <span style="  color: #0aabe1;">www.maxicredito.com</span>, sus clientes y sus terceros para recolectar, procesar y comercializar los datos contenidos en el mismo.
+                                    </p>
+
+                                    <p>Con base en lo anterior <span style="  color: #0aabe1;">www.maxicredito.com</span>, sus clientes y sus terceros podrán reproducir, publicar, traducir, adaptar, extraer o compendiar los datos o información suministrada. Del mismo modo le confiere la facultad para disponer de ellos a título oneroso o gratuito bajo las condiciones lícitas que su libre criterio dicte. Además quien haga uso de los servicios ofrecidos por  <span style="  color: #0aabe1;">www.maxicredito.com</span> declara que conoce y acepta que los datos capturados en el mismo pueden ser utilizados para impulsar, dirigir, ejecutar y de manera general, llevar a cabo campañas promociones o concursos de carácter  comercial o publicitario, de <span style="  color: #0aabe1;">www.maxicredito.com</span>, sus clientes y sus o de otras personas o sociedades con quien está contrate tales actividades, mediante el envío de Email, Mensajes de texto  o a través de cualquier otro medio análogo y/o digital de comunicación.</p>
+                                    <p>Si la información suministrada por los usuarios no cumple con los términos y condiciones, <span style="  color: #0aabe1;">www.maxicredito.com</span> de forma unilateral removerá o eliminara dicha información. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 5px;">
+                            <div class="panel panel-info oferta">
+                                <div class="panel-heading">Información de Productos Financieros</div>
+                                <div class="panel-body" style="text-align: left;">
+                                    <p>
+                                        <span style="  color: #0aabe1;">www.maxicredito.com</span> actualiza y modifica de forma constantes la información asociada a los productos financieros expuestos en el sitio web.  Pero <span style="  color: #0aabe1;">www.maxicredito.com</span> no otorga garantía alguna, expresa o implícita, a cerca de la veracidad, exactitud o confiabilidad de la información incluida y asociada a los créditos ofrecidos por las entidades financieras, <span style="  color: #0aabe1;">www.maxicredito.com</span>  ni apoya o respalda las opiniones expresadas por los usuarios.
+                                    </p>
+
+                                    <p>
+                                        Usted reconoce y acepta bajo su propio riesgo que la información incluida en <span style="  color: #0aabe1;">www.maxicredito.com</span>  sobre los créditos ofrecidos puede variar respecto a la información que brinde las entidades financieras.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <footer>
+            <div class="container">
+                <a href="#" class="scrollpoint sp-effect3">
+                    <img src="assets/img/freeze/logo.png" alt="" class="logo">
+                </a>
+                <div class="social">
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-google-plus fa-lg"></i></a>
+                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                </div>
+                <div class="rights">
+                    <p>Copyright &copy; 2014</p>
+                    <p><b>Ricardo Restrepo - German Bernal - John Sierra - Sergios Rios</b></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/placeholdem.min.js"></script>
+    <script src="assets/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
