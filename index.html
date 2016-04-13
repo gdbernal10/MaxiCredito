@@ -24,6 +24,7 @@
     <script type="text/javascript" src="assets/js/modernizr.custom.32033.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.5.3/angular-resource.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.3/angular-cookies.min.js"></script>
     <script type="text/javascript" src="scripts/underscore-min.js"></script>
     <script type="text/javascript" src="scripts/logic.js"></script>
     <script type="text/javascript" src="app/app.js"></script>
@@ -107,6 +108,9 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a class="getApp" href="#support">Buscar Mi Crédito</a>
+                        </li>
+                        <li>
+                            <a class="getApp" href ng-click="manageSubscriptions($event)">Subscripciones</a>
                         </li>
                     </ul>
                 </div>
@@ -725,6 +729,77 @@
                                                         Acepto Terminos y Condiciones
                                                     </label>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ventana de administracion de subscripciones -->
+        <div id="subscriptions" class="modal-demo" ng-controller="SubscriptionsController">
+            <button type="button" class="close" onclick="Custombox.close();">
+                <span>&times;</span><span class="sr-only">Close</span>
+            </button>
+            <br />
+            <div class="text">
+                <div class="price-block">
+                    <div class="panel panel-default oferta">
+                        <div class="price-header">
+                            <div class="filtering scrollpoint sp-effect5 col-sm-6">
+                                <p style="color:white; font-weight:bold; font-size:14pt;">Administra tus notificaciones</p>
+                            </div>
+                            <div class="filtering scrollpoint sp-effect5 col-sm-6">
+                                <img src="assets/img/oferta.png" />
+                            </div>
+                        </div>
+                        <div class="price-plan">
+                            <ul>
+                                <li>
+                                    <label class="notificationHeader" ng-show="!user.email">Solo debes identificarte con tu correo electrónico</label>
+                                    <label class="notificationHeader" ng-show="!!user.email">Administra tus subscripciones</label>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body" ng-show="!user.email">
+                                                    <div class="form-horizontal">
+                                                        <div class="form-group">
+                                                            <label class="sr-only" for="txtEmail">Email:</label>
+                                                            <div class="col-md-12">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></div>
+                                                                    <input type="text" class="form-control" id="txtEmail" placeholder="Correo electrónico" ng-model="user.email">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <button type="button" class="btn btn-mxc col-md-12" ng-click="identify()"><b>Identificarme</b></button>
+                                                </div>
+                                                
+                                                <div ng-show="!!subscriptions && !!user.email">
+                                                    <table class="table" width="99%">
+                                                        <tr>
+                                                            <th>Valor Crédito</th>
+                                                            <th>Plazo (meses)</th>
+                                                            <th>Empleado</th>
+                                                            <th>Salario</th>
+                                                            <th>&nbsp;</th>
+                                                        </tr>
+                                                        <tr ng-repeat="sub in subscriptions">
+                                                            <td>{{ sub.amount | currency }}</td>
+                                                            <td>{{ sub.term }}</td>
+                                                            <td>{{ sub.employee ? 'SI': 'NO' }}</td>
+                                                            <td>{{ sub.salary | currency }}</td>
+                                                            <td><a href ng-click="deleteSubscription(sub.id)">Eliminar</a></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>

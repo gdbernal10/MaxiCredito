@@ -2,7 +2,7 @@
 (function(){
    'use strict';
    
-   var app = angular.module('maxicreditoApp', ['ngResource', 'maxicreditoControllers']);
+   var app = angular.module('maxicreditoApp', ['ngResource', 'ngCookies', 'maxicreditoControllers']);
    
    app.constant('myConfig', {
       endPoint: 'http://ec2-52-23-194-180.compute-1.amazonaws.com'

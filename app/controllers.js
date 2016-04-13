@@ -2,11 +2,12 @@
     /*global angular*/
     /*global $*/
     /*global _*/
+    /*global Custombox*/
     'use strict';
     
     var controllers = angular.module('maxicreditoControllers', ['maxicreditoServices']);
     
-    controllers.controller('MainController', ['$scope', '$http', 'Products', 'need', function($scope, $http, Products, need){
+    controllers.controller('MainController', ['$scope', '$http', '$cookies', 'Products', 'need', function($scope, $http, $cookies, Products, need){
         $http.defaults.useXDomain = true;
         $scope.need = need;
         $scope.products = Products.get();
@@ -157,6 +158,26 @@
 				$scope.product2 = undefined;
 			}
 		}
+		
+		$scope.manageSubscriptions = function(e){
+    		var currentScroll = $(window).scrollTop();
+    		
+    		if(!!$cookies.get('userEmail')){
+    			 $scope.$broadcast('manageSubscriptions');
+    		}
+    		
+		    Custombox.open({
+                target: '#subscriptions',
+                effect: 'swell',
+                overlayClose: true,
+                overlayColor: '#fff',
+                close: function(){
+                    //posicionar la ventana donde se encontraba al abrir los detalles
+                    window.moveTo(currentScroll, $(window).scrollLeft());
+                }
+            });
+            e.preventDefault();
+    	}
     }]);
     
     controllers.controller('ScannerController', ['$scope', 'need', 'scanners', function($scope, need, scanners){
@@ -178,6 +199,47 @@
     			Custombox.close();
     		});
     	}
+    }]);
+    
+    controllers.controller('SubscriptionsController', ['$scope', '$cookies', '$http', 'myConfig', 'subscriptions', 'scanners', function($scope, $cookies, $http, myConfig, subscriptions, scanners){
+    	$scope.subscriptions = [];
+    	$scope.user = {};
+    	
+    	$scope.identify = function(){
+    		if(!$scope.user.email) return;
+    		$scope.subscriptions = subscriptions.search({email: $scope.user.email}, function(values){
+    			$cookies.put('userEmail', $scope.user.email);
+    		});
+    	}
+    	
+    	if(!!$cookies.get('userEmail')){
+    		$scope.user.email = $cookies.get('userEmail');
+    		$scope.identify();
+    		
+    	}
+    	
+    	$scope.deleteSubscription = function(id){
+    		// $http({
+    		// 	url: myConfig.endPoint + '/scanners/' + id,
+    		// 	method: 'DELETE'
+    		// }).then(function(){
+    		// 	var i = _.findIndex($scope.subscriptions, function(item){
+    		// 		return item.id === id;	
+    		// 	});
+    		// 	delete $scope.subscriptions[i];
+    		// });
+    		scanners.delete({id: id}, function(){
+    			var i = _.findIndex($scope.subscriptions, function(item){
+    				return item.id === id;	
+    			});
+    			delete $scope.subscriptions[i];
+    		});
+    	}
+    	
+    	$scope.$on('manageSubscriptions', function (evnt, data) {
+			$scope.identify();
+		});
+    	
     }]);
    
 }());

@@ -9,10 +9,18 @@
 	}]);
 	
 	services.factory('scanners', ['$resource', 'myConfig', function($resource, myConfig){
-		return $resource(myConfig.endPoint + '/scanners');
+		return $resource(myConfig.endPoint + '/scanners/:id', {id: '@id'}, {
+			delete: { method: 'DELETE'}
+		});
 	}]);
 	
 	services.factory('need', [function(){
 	    return {};
+	}]);
+	
+	services.factory('subscriptions', ['$resource', 'myConfig', function($resource, myConfig){
+		return $resource(myConfig.endPoint + '/scanners/user', {}, {
+			search: { method: 'POST', isArray: true }
+		});
 	}]);
 }())
