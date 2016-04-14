@@ -204,12 +204,18 @@
     controllers.controller('SubscriptionsController', ['$scope', '$cookies', '$http', 'myConfig', 'subscriptions', 'scanners', function($scope, $cookies, $http, myConfig, subscriptions, scanners){
     	$scope.subscriptions = [];
     	$scope.user = {};
+    	$scope.authenticated = false;
     	
     	$scope.identify = function(){
     		if(!$scope.user.email) return;
     		$scope.subscriptions = subscriptions.search({email: $scope.user.email}, function(values){
     			$cookies.put('userEmail', $scope.user.email);
+    			$scope.authenticated = true;
     		});
+    	}
+    	
+    	$scope.isAuthenticated = function(){
+    		return !!$cookies.get('userEmail');
     	}
     	
     	if(!!$cookies.get('userEmail')){
@@ -219,15 +225,7 @@
     	}
     	
     	$scope.deleteSubscription = function(id){
-    		// $http({
-    		// 	url: myConfig.endPoint + '/scanners/' + id,
-    		// 	method: 'DELETE'
-    		// }).then(function(){
-    		// 	var i = _.findIndex($scope.subscriptions, function(item){
-    		// 		return item.id === id;	
-    		// 	});
-    		// 	delete $scope.subscriptions[i];
-    		// });
+    		
     		scanners.delete({id: id}, function(){
     			var i = _.findIndex($scope.subscriptions, function(item){
     				return item.id === id;	

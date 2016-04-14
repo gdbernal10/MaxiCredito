@@ -771,7 +771,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="panel panel-default">
-                                                <div class="panel-body" ng-show="!user.email">
+                                                <div class="panel-body" ng-show="!isAuthenticated()">
                                                     <div class="form-horizontal">
                                                         <div class="form-group">
                                                             <label class="sr-only" for="txtEmail">Email:</label>
@@ -787,7 +787,7 @@
                                                     <button type="button" class="btn btn-mxc col-md-12" ng-click="identify()"><b>Identificarme</b></button>
                                                 </div>
                                                 
-                                                <div ng-show="!!subscriptions && !!user.email">
+                                                <div ng-show="!!subscriptions && !!isAuthenticated()">
                                                     <table class="table" width="99%">
                                                         <tr>
                                                             <th>Valor Crédito</th>
