@@ -230,7 +230,7 @@
     			var i = _.findIndex($scope.subscriptions, function(item){
     				return item.id === id;	
     			});
-    			delete $scope.subscriptions[i];
+    			$scope.subscriptions.splice(i, 1);
     		});
     	}
     	

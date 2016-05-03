@@ -834,13 +834,66 @@
                         <div class="price-plan">
                             <ul>
                                 <li>
-                                    <label class="notificationHeader">Crédito Libre Inversión - Plazo {{ term }} meses - Monto del crédito {{ amount | currency }}</label>
+                                    <label class="notificationHeader">Crédito Libre Inversión - Plazo {{ need.term }} meses - Monto del crédito {{ need.amount | currency }}</label>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="panel panel-default">
                                                 <div class="panel-body">
                                                     <div>
-                                                        Detalle de la oferta - Terminos y condiciones
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-md-offset-4"><img ng-src="Img/{{ selectedProduct.code }}.png"></img></div>
+                                                        </div>
+                                                        <table class="table">
+                                                            <tr>
+                                                                <td>Tasa Mensual</td>
+                                                                <td>{{ selectedProduct.monthlyRate | number:2 }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Pago Mensual</td>
+                                                                <td>{{ selectedProduct.monthlyPayment | currency }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Pago Total</td>
+                                                                <td>{{ selectedProduct.totalPayment | currency }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Total Intereses</td>
+                                                                <td>{{ selectedProduct.totalRatePayment | currency }}</td>
+                                                            </tr>
+                                                        </table>
+                                                        
+                                                        <!--<div class="row">-->
+                                                        <!--    <div class="col-md-4 col-md-offset-2">Tasa Mensual</div>-->
+                                                        <!--    <div class="col-md-4">{{ selectedProduct.monthlyRate | number }}</div>-->
+                                                        <!--</div>-->
+                                                        <!--<div class="row">-->
+                                                        <!--    <div class="col-md-4 col-md-offset-2">Pago Mensual</div>-->
+                                                        <!--    <div class="col-md-4">{{ selectedProduct.monthlyPayment | currency }}</div>-->
+                                                        <!--</div>-->
+                                                        <!--<div class="row">-->
+                                                        <!--    <div class="col-md-4 col-md-offset-2">Pago Total</div>-->
+                                                        <!--    <div class="col-md-4">{{ selectedProduct.totalPayment | currency }}</div>-->
+                                                        <!--</div>-->
+                                                        <!--<div class="row">-->
+                                                        <!--    <div class="col-md-4 col-md-offset-2">Total Intereses</div>-->
+                                                        <!--    <div class="col-md-4">{{ selectedProduct.totalRatePayment | currency }}</div>-->
+                                                        <!--</div>-->
+                                                        <br />
+                                                        <div class="list-group">
+                                                          <a href class="list-group-item active">
+                                                            <h4 class="list-group-item-heading">Restricciones</h4>
+                                                          </a>
+                                                          <a href class="list-group-item">
+                                                            <h5 class="list-group-item-heading">Salario mínimo: {{ selectedProduct.restrictions[0].minSalary | currency }}</h5>
+                                                          </a>
+                                                          <a href class="list-group-item">
+                                                            <h5 class="list-group-item-heading">Debe se empleado: {{ !!selectedProduct.restrictions[0].employee ? 'Si': 'No' }}</h5>
+                                                          </a>
+                                                          <a href class="list-group-item">
+                                                            <h5 class="list-group-item-heading">Tiempo mímino: {{ selectedProduct.restrictions[0].mesesemployee | number }} meses</h5>
+                                                          </a>
+                                                        </div>
+                                                            
                                                     </div>
                                                 </div>
                                             </div>
@@ -877,7 +930,15 @@
 
     <div id="slideIzq" class="panel panel-default oferta">
         <div class="price-block">
-            <div class="price-header-promo">
+            <div>
+                <div>
+                    <p style="font-weight:bold; font-size:22px;" class="month">
+                        Conoce y activa el scanner de ofertas
+                    </p>
+                </div>
+            </div>
+            
+            <!-- <div class="price-header-promo">
                 <div class="filtering scrollpoint sp-effect5 col-md-12">
                     <img src="assets/img/oferta.png" width="90" height="150" />
                 </div>
@@ -902,7 +963,7 @@
                         </div>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
     <input type="hidden" name="filterTerm" ng-model="term"/>
